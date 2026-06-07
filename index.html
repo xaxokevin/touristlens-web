@@ -1,7 +1,18 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tourist Lens — Point your camera. Discover the story.</title><meta name="description" content="Tourist Lens is an AI travel companion. Point your camera at any landmark for instant identification and a narrated history. Privacy-first.">
-<meta property="og:title" content="Tourist Lens"><meta property="og:description" content="Tourist Lens is an AI travel companion. Point your camera at any landmark for instant identification and a narrated history. Privacy-first.">
+<link rel="canonical" href="https://xaxokevin.github.io/touristlens-web/">
+<link rel="alternate" hreflang="en" href="https://xaxokevin.github.io/touristlens-web/">
+<link rel="alternate" hreflang="es" href="https://xaxokevin.github.io/touristlens-web/index.es.html">
+<link rel="alternate" hreflang="x-default" href="https://xaxokevin.github.io/touristlens-web/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="theme-color" content="#0b0910">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Tourist Lens">
+<meta property="og:url" content="https://xaxokevin.github.io/touristlens-web/">
+<meta property="og:title" content="Tourist Lens — Point your camera. Discover the story."><meta property="og:description" content="Tourist Lens is an AI travel companion. Point your camera at any landmark for instant identification and a narrated history. Privacy-first.">
+<meta property="og:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tourist Lens"><meta name="twitter:description" content="Point your camera at any landmark for instant AI identification and a narrated history."><meta name="twitter:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tourist Lens","applicationCategory":"TravelApplication","operatingSystem":"iOS, Android","description":"AI travel companion. Point your camera at any landmark for instant identification and a narrated history.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <style>
 :root{--text:#f5f2ea;--dim:#a49f90;--gold:#cfa75a;--gold2:#f0d99a;--line:rgba(255,255,255,.1);--sp:0}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -55,6 +66,23 @@ section{padding:0 0 100px}
 .band h2{font-size:clamp(1.8rem,1rem+2.5vw,2.6rem);font-weight:700}.band p{color:var(--dim);max-width:52ch;margin:14px auto 0;font-size:1.05rem}
 footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;color:var(--dim);font-size:.9rem;position:relative;z-index:2}
 .foot-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.foot-links a{color:var(--dim)}.foot-links a:hover{color:var(--gold)}
+/* FILM BAND */
+.film{padding:10px 0 90px}
+.film .frame{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);
+background:linear-gradient(160deg,rgba(30,28,40,.55),rgba(14,13,20,.6));backdrop-filter:blur(8px);
+box-shadow:0 50px 100px -30px rgba(0,0,0,.8),0 0 70px -24px rgba(207,167,90,.3);aspect-ratio:16/9}
+.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0a0c14}
+.film .fade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 8%,transparent 40%,rgba(8,7,12,.5) 100%)}
+.film .v-sound{position:absolute;bottom:16px;right:16px;z-index:3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+background:rgba(12,11,18,.55);border:1px solid var(--line);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;transition:.2s}
+.film .v-sound:hover{border-color:var(--gold);color:var(--gold)}
+.film .v-sound svg{width:20px;height:20px;fill:currentColor}
+.film .v-play{position:absolute;inset:0;z-index:3;display:grid;place-items:center;background:none;border:none;cursor:pointer}
+.film .v-play span{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:rgba(12,11,18,.45);border:1px solid var(--line);backdrop-filter:blur(10px);transition:.25s cubic-bezier(.16,1,.3,1)}
+.film .v-play:hover span{transform:scale(1.08);border-color:var(--gold);box-shadow:0 0 40px -8px rgba(207,167,90,.5)}
+.film .v-play svg{width:30px;height:30px;fill:var(--gold2);margin-left:4px}
+.film.playing .v-play{display:none}
+@media(max-width:880px){.film .frame{aspect-ratio:4/5;max-width:420px;margin:0 auto}}
 /* FLOATING BANNER */
 .banner{position:fixed;left:50%;bottom:22px;z-index:40;display:flex;align-items:center;gap:14px;padding:11px 12px 11px 20px;border-radius:999px;
 background:rgba(20,18,28,.55);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(140%);
@@ -115,14 +143,23 @@ transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .35s}
 <button class="btn" type="button" data-ea-open><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></button>
 </div></div>
 <div class="stage"><div class="duo">
-<img class="back" src="assets/img/camera_result.png" alt="Landmark identification result">
-<img class="front" src="assets/img/camera_scan.png" alt="Tourist Lens scanning a landmark live through the camera">
+<picture><source srcset="assets/img/camera_result.webp" type="image/webp"><img class="back" src="assets/img/camera_result.png" width="1920" height="1920" loading="eager" decoding="async" alt="Landmark identification result"></picture>
+<picture><source srcset="assets/img/camera_scan.webp" type="image/webp"><img class="front" src="assets/img/camera_scan.png" width="1920" height="1920" loading="eager" fetchpriority="high" decoding="async" alt="Tourist Lens scanning a landmark live through the camera"></picture>
 </div></div></header></div>
+
+<section class="film wrap" aria-labelledby="filmHead"><div class="sh"><h2 id="filmHead">See it in motion</h2><p>A first look at Tourist Lens — the moment a place reveals its story.</p></div>
+<div class="frame" id="film">
+<video id="filmVideo" muted loop playsinline preload="none" poster="assets/img/city_landing.webp" aria-label="Tourist Lens cinematic preview">
+<source src="https://firebasestorage.googleapis.com/v0/b/tourist-ai-guide-prod.firebasestorage.app/o/welcome_video%2Flow.mp4?alt=media&token=b9819299-5b29-4af5-9f0c-a27d0686d796" type="video/mp4"></video>
+<div class="fade"></div>
+<button class="v-play" id="filmPlay" type="button" aria-label="Play preview video"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+<button class="v-sound" id="filmSound" type="button" aria-label="Unmute video" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" opacity=".4"/></svg></button>
+</div></section>
 <section id="tour" class="wrap"><div class="sh"><h2>See it the way you'll use it</h2><p>Real screens from the app — point, identify, and explore.</p></div>
-<div class="row"><div class="copy"><div class="n">Live identification</div><h3>Know what you're looking at</h3><p>Point at any landmark and Tourist Lens identifies it in real time, with a confidence score you can actually trust.</p><ul><li>Monuments, sculptures &amp; hidden details</li><li>Ranked by confidence, never a blind guess</li><li>On-device privacy filter runs first</li></ul></div><div class="shot"><img src="assets/img/camera_entire_result.png" alt="Full landmark identification result"></div></div>
-<div class="row rev"><div class="copy"><div class="n">AI narration &amp; chat</div><h3>The story behind the stone</h3><p>Hear a rich, grounded history of every place — then ask anything. It's a local guide that fits in your pocket.</p><ul><li>Narrated in 8 languages</li><li>Ask follow-ups in natural language</li><li>Every discovery saved to your history</li></ul></div><div class="shot"><img src="assets/img/history.png" alt="History and narration screen"></div></div>
-<div class="row"><div class="copy"><div class="n">Live points of interest</div><h3>Discover what's around you</h3><p>A living map surfaces the landmarks near you, clustered and ranked so the best stops rise to the top.</p><ul><li>Real-time POI clustering</li><li>Tap to identify or navigate</li><li>Powered by Google Maps</li></ul></div><div class="shot"><img src="assets/img/map.png" alt="Map of nearby points of interest"></div></div>
-<div class="row rev"><div class="copy"><div class="n">Passes &amp; passport</div><h3>Collect every place you discover</h3><p>Stamp a digital passport as you explore, and unlock unlimited scanning with honest, time-based passes.</p><ul><li>Pay for time, not subscriptions</li><li>Discoveries encrypted on your device</li><li>No auto-renew, no surprises</li></ul></div><div class="shot"><img src="assets/img/passport.png" alt="Travel passport with collected stamps"></div></div>
+<div class="row"><div class="copy"><div class="n">Live identification</div><h3>Know what you're looking at</h3><p>Point at any landmark and Tourist Lens identifies it in real time, with a confidence score you can actually trust.</p><ul><li>Monuments, sculptures &amp; hidden details</li><li>Ranked by confidence, never a blind guess</li><li>On-device privacy filter runs first</li></ul></div><div class="shot"><picture><source srcset="assets/img/camera_entire_result.webp" type="image/webp"><img src="assets/img/camera_entire_result.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Full landmark identification result"></picture></div></div>
+<div class="row rev"><div class="copy"><div class="n">AI narration &amp; chat</div><h3>The story behind the stone</h3><p>Hear a rich, grounded history of every place — then ask anything. It's a local guide that fits in your pocket.</p><ul><li>Narrated in 8 languages</li><li>Ask follow-ups in natural language</li><li>Every discovery saved to your history</li></ul></div><div class="shot"><picture><source srcset="assets/img/history.webp" type="image/webp"><img src="assets/img/history.png" width="1920" height="1920" loading="lazy" decoding="async" alt="History and narration screen"></picture></div></div>
+<div class="row"><div class="copy"><div class="n">Live points of interest</div><h3>Discover what's around you</h3><p>A living map surfaces the landmarks near you, clustered and ranked so the best stops rise to the top.</p><ul><li>Real-time POI clustering</li><li>Tap to identify or navigate</li><li>Powered by Google Maps</li></ul></div><div class="shot"><picture><source srcset="assets/img/map.webp" type="image/webp"><img src="assets/img/map.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Map of nearby points of interest"></picture></div></div>
+<div class="row rev"><div class="copy"><div class="n">Passes &amp; passport</div><h3>Collect every place you discover</h3><p>Stamp a digital passport as you explore, and unlock unlimited scanning with honest, time-based passes.</p><ul><li>Pay for time, not subscriptions</li><li>Discoveries encrypted on your device</li><li>No auto-renew, no surprises</li></ul></div><div class="shot"><picture><source srcset="assets/img/passport.webp" type="image/webp"><img src="assets/img/passport.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Travel passport with collected stamps"></picture></div></div>
 </section>
 <section class="wrap"><div class="band"><h2>Privacy, by design</h2><p>A local model screens every image on your device before anything is sent. Your data stays yours — AES-256 encryption and certificate pinning, end to end.</p></div></section>
 <footer><div class="foot-links"><a href="legal/privacy/en.html">Privacy Policy</a><a href="legal/terms/en.html">Terms & Conditions</a><a href="mailto:tourist.ai.guide@gmail.com">Contact</a></div><p>© 2026 Tourist Lens. All rights reserved.</p></footer>
@@ -143,10 +180,10 @@ transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .35s}
 <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
 <input type="hidden" name="_next" value="https://xaxokevin.github.io/touristlens-web/thanks.html">
 <div class="f-row"><input type="text" name="name" placeholder="Your name (optional)" autocomplete="name"><input type="email" name="email" id="eaEmail" required placeholder="Email for your store account" autocomplete="email"></div>
-<div class="f-row"><select name="platform" required><option value="" disabled selected>Choose your device</option><option value="Android">Android (Google Play)</option><option value="iOS">iPhone (TestFlight)</option><option value="Both">Both</option></select><button type="submit">Request access</button></div>
+<div class="f-row"><select name="platform" required aria-label="Choose your device"><option value="" disabled selected>Choose your device</option><option value="Android">Android (Google Play)</option><option value="iOS">iPhone (TestFlight)</option><option value="Both">Both</option></select><button type="submit">Request access</button></div>
 <p class="f-note">We use your email only to add you as a beta tester. No spam. · <a href="legal/privacy/en.html">Privacy Policy</a></p>
 </form></div>
-<div class="m-shot"><img src="assets/img/camera_scan.png" alt="Tourist Lens app preview"></div>
+<div class="m-shot"><picture><source srcset="assets/img/camera_scan.webp" type="image/webp"><img src="assets/img/camera_scan.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Tourist Lens app preview"></picture></div>
 </div></div>
 
 <script>
@@ -155,10 +192,31 @@ var banner=document.getElementById('banner'),modal=document.getElementById('eaMo
 function maybeShow(){if(shown||sessionStorage.getItem(KEY))return;if(scrollY>innerHeight*0.3){banner.classList.add('show');shown=true}}
 addEventListener('scroll',maybeShow,{passive:true});maybeShow();
 document.getElementById('bannerX').addEventListener('click',function(){banner.classList.remove('show');sessionStorage.setItem(KEY,'1')});
-function openM(){modal.classList.add('open');document.body.style.overflow='hidden';setTimeout(function(){email&&email.focus()},60)}
-function closeM(){modal.classList.remove('open');document.body.style.overflow=''}
+var dialog=modal.querySelector('.dialog'),lastFocus=null;
+var FOCUSABLE='a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+function openM(){lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';setTimeout(function(){email&&email.focus()},60)}
+function closeM(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus()}
 document.querySelectorAll('[data-ea-open]').forEach(function(b){b.addEventListener('click',openM)});
 document.querySelectorAll('[data-ea-close]').forEach(function(b){b.addEventListener('click',closeM)});
-addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM()});
+addEventListener('keydown',function(e){
+ if(!modal.classList.contains('open'))return;
+ if(e.key==='Escape'){closeM();return}
+ if(e.key==='Tab'){var f=dialog.querySelectorAll(FOCUSABLE);if(!f.length)return;var first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+
+/* FILM VIDEO */
+var film=document.getElementById('film'),vid=document.getElementById('filmVideo'),vplay=document.getElementById('filmPlay'),vsound=document.getElementById('filmSound');
+if(film&&vid){
+ var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,loaded=false;
+ function load(){if(!loaded){vid.load();loaded=true}}
+ function play(){load();var p=vid.play();if(p&&p.catch)p.catch(function(){});film.classList.add('playing')}
+ function pause(){vid.pause()}
+ vplay.addEventListener('click',play);
+ vsound.addEventListener('click',function(){vid.muted=!vid.muted;var on=!vid.muted;vsound.setAttribute('aria-pressed',on);vsound.setAttribute('aria-label',on?'Mute video':'Unmute video');vsound.querySelector('path').setAttribute('opacity',on?'1':'.4');if(on&&vid.paused)play()});
+ if('IntersectionObserver'in window&&!reduce){
+  new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){play()}else{pause()}})},{threshold:.5}).observe(film);
+ }
+}
 })();
 </script></body></html>
