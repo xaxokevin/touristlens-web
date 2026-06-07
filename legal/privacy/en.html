@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy · Tourist Lens</title>
+<link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="legal-body">
+<header class="site-nav">
+  <a class="brand" href="../../index.html">Tourist&nbsp;Lens</a>
+</header>
+<main class="legal-wrap">
+<article class="legal glass">
+<nav class="lang-switch"><strong>English</strong> · <a href="es.html">Español</a> · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a> · <a href="de.html">Deutsch</a> · <a href="pt.html">Português</a> · <a href="zh.html">中文</a> · <a href="ja.html">日本語</a></nav>
+<h2>Privacy Policy</h2>
+<p>This privacy policy applies to the Tourist Lens app (hereby referred to as &quot;Application&quot;) for mobile devices that was created by xaxo (hereby referred to as &quot;Service Provider&quot;) as a Freemium service. This service is intended for use &quot;AS IS&quot;.</p>
+<h2>Information Collection and Use</h2>
+<p>The Application collects information when you download and use it. This information may include information such as</p>
+<ul><li>Your device&#x27;s Internet Protocol address (e.g. IP address)</li><li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li><li>The time spent on the Application</li><li>The operating system you use on your mobile device</li></ul>
+<p>The Application collects your device&#x27;s location, which helps the Service Provider determine your approximate geographical location and make use of in below ways:</p>
+<ul><li><strong>Geolocation Services</strong>: The Service Provider utilizes location data (via Google Maps Platform) to provide features such as personalized content, relevant recommendations, and location-based navigation services.</li><li><strong>Sensor Fusion</strong>: To determine exactly which landmark you are viewing, the Application processes magnetometer (compass) and accelerometer data in conjunction with GPS coordinates.</li><li><strong>Analytics and Improvements</strong>: Aggregated and anonymized location and sensor data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.</li><li><strong>Third-Party Services</strong>: Periodically, the Service Provider may transmit anonymized location data to external services (such as Google Analytics). These services assist them in enhancing the Application and optimizing their offerings.</li></ul>
+<p>The Application utilizes your device&#x27;s camera for the visual identification of monuments and landmarks.</p>
+<ul><li><strong>Edge AI Filtering</strong>: Before any image leaves your device, a local on-device model (<strong>Google ML Kit Image Labeling</strong>) evaluates it. Low-quality captures (blurry or dark) and obvious non-tourism content (such as screenshots) are filtered out locally. Tourism-relevant images are then transmitted over encrypted channels to our cloud Vision AI partners, where an additional <strong>Google SafeSearch</strong> filter screens for sensitive content before processing. Images are used solely to identify landmarks and subjects of interest, not to identify individuals.</li><li><strong>Cloud Processing</strong>: Images processed for identification purposes are transmitted via encrypted channels to our Vision AI partners. If you choose to save or share specific content, these images may be stored on the Service Provider&#x27;s servers (Firebase Storage) with strict access controls.</li></ul>
+<p>The Application uses Artificial Intelligence (AI) technologies, specifically Google Gemini, to provide conversational context, historical narrations, and personalized recommendations. Your chat interactions and inputs are processed by Google&#x27;s generative AI services. By using these features, you acknowledge that your data will be processed by third-party AI models to provide the service. All AI processing is performed in accordance with this privacy policy and applicable laws.</p>
+<h2>Privacy by Design &amp; Advanced Security</h2>
+<p>The Service Provider implements high-level security standards to protect your data.</p>
+<ul><li><strong>Client-Side Encryption</strong>: Sensitive personal information, including your email address, chat messages, and the names of locations discovered, are protected using client-side <strong>AES-256-GCM</strong> encryption. The cryptographic keys required to read this data are stored exclusively in your device&#x27;s secure enclave (Keychain/EncryptedSharedPreferences) and are never accessible to the Service Provider or any third party.</li><li><strong>PII Sanitization</strong>: All telemetry and debug logs are automatically sanitized on your device before transmission. Any potential Personal Identifiable Information (PII) is replaced by generic identifiers to ensure your anonymity while allowing us to improve technical performance.</li><li><strong>Certificate Pinning</strong>: To prevent &quot;Man-in-the-Middle&quot; attacks, the Application utilizes <strong>SSL/TLS Certificate Pinning</strong> for all communications with our AI backends. This ensures that your data only reaches our verified servers.</li><li><strong>Device Anchor &amp; Session Integrity</strong>: To prevent unauthorized use and ensure session consistency, the Application uses a one-way hashed hardware identifier (<strong>Device Anchor</strong>) and <strong>Schrödinger&#x27;s Account Protection</strong> (session integrity checks). This protects your account from being hijacked during an active session and ensures that rewards and discoveries are attributed correctly.</li><li><strong>App Check</strong>: We integrate <strong>Firebase App Check</strong> to verify that all requests originate from an unmodified version of the official Tourist Lens application on a trusted device.</li></ul>
+<p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, such as your email address and profile information during the registration process (via Firebase Auth). If you start as a Guest, your scan history and discoveries are stored anonymously; upon registration, this data is securely migrated to your new account via Firebase account linking to ensure continuity.</p>
+<h2>Third Party Access</h2>
+<p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+<p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+<ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li><li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li><li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics</a></li><li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></li><li><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google Gemini API</a></li><li><a href="https://cloud.google.com/terms" target="_blank" rel="noopener">Google Cloud Vision AI</a></li></ul>
+<p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+<ul><li>as required by law, such as to comply with a subpoena, or similar legal process;</li><li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li><li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li></ul>
+<h2>Opt-Out Rights</h2>
+<p>You can stop all collection of information by the Application easily by uninstalling it. Additionally, you have the right to opt-out of sharing anonymous session telemetry data (logs regarding feature usage and performance). This choice is presented during the initial guest setup and can be adjusted within the Application&#x27;s settings.</p>
+<h2>Data Retention &amp; Account Deletion Policy</h2>
+<p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter.</p>
+<h2>How to Request Account Deletion:</h2>
+<p>You have the right to delete your account and all associated data at any time. You can do this in two ways:</p>
+<ol><li><strong>In-App:</strong> Go to Settings &gt; Profile &gt; Delete Account. This will immediately trigger the permanent deletion of your profile, stamps, and encrypted data.</li><li><strong>Via Email:</strong> If you can no longer access the Application, or wish to request deletion externally, please contact us at <strong>tourist.ai.guide@gmail.com</strong>. Your request will be processed within a reasonable time (typically less than 7 days).</li></ol>
+<p>Upon deletion, all personally identifiable information and encrypted travel plans will be permanently removed from our production servers.</p>
+<h2>Children</h2>
+<p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+<p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (tourist.ai.guide@gmail.com) so that they will be able to take the necessary actions.</p>
+<h2>Security</h2>
+<p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+<h2>Changes</h2>
+<p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+<p>This privacy policy is effective as of 2026-06-07</p>
+<h2>Your Consent</h2>
+<p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+<h2>Contact Us</h2>
+<p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at tourist.ai.guide@gmail.com.</p>
+<hr>
+</article>
+</main>
+<footer class="site-foot"><p>© 2026 Tourist Lens · <a href="mailto:tourist.ai.guide@gmail.com">tourist.ai.guide@gmail.com</a></p></footer>
+</body>
+</html>
