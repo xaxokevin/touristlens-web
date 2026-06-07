@@ -111,23 +111,6 @@ background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));b
 .band p{color:var(--dim);max-width:54ch;margin:14px auto 0;font-size:1.06rem;position:relative}
 footer{border-top:1px solid var(--line);padding:42px 0;text-align:center;color:var(--dim);font-size:.9rem;position:relative;z-index:2}
 .foot-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.foot-links a{color:var(--dim)}.foot-links a:hover{color:var(--gold)}
-/* FILM BAND */
-.film{padding:10px 0 90px}
-.film .frame{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);
-background:linear-gradient(160deg,rgba(30,28,40,.55),rgba(14,13,20,.6));backdrop-filter:blur(8px);
-box-shadow:0 50px 100px -30px rgba(0,0,0,.8),0 0 70px -24px rgba(207,167,90,.3);aspect-ratio:16/9}
-.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0a0c14}
-.film .fade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 8%,transparent 40%,rgba(8,7,12,.5) 100%)}
-.film .v-sound{position:absolute;bottom:16px;right:16px;z-index:3;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
-background:rgba(12,11,18,.55);border:1px solid var(--line);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;transition:.2s}
-.film .v-sound:hover{border-color:var(--gold);color:var(--gold)}
-.film .v-sound svg{width:20px;height:20px;fill:currentColor}
-.film .v-play{position:absolute;inset:0;z-index:3;display:grid;place-items:center;background:none;border:none;cursor:pointer}
-.film .v-play span{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:rgba(12,11,18,.45);border:1px solid var(--line);backdrop-filter:blur(10px);transition:.25s cubic-bezier(.16,1,.3,1)}
-.film .v-play:hover span{transform:scale(1.08);border-color:var(--gold);box-shadow:0 0 40px -8px rgba(207,167,90,.5)}
-.film .v-play svg{width:30px;height:30px;fill:var(--gold2);margin-left:4px}
-.film.playing .v-play{display:none}
-@media(max-width:880px){.film .frame{aspect-ratio:4/5;max-width:420px;margin:0 auto}}
 
 /* ===== FLOATING BANNER ===== */
 .banner{position:fixed;left:50%;bottom:22px;z-index:40;display:flex;align-items:center;gap:14px;padding:11px 12px 11px 20px;border-radius:999px;
@@ -214,14 +197,6 @@ transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .35s}
 <a class="scrolldown" href="#tour" aria-label="Scroll to features"><span>Explore</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
 </header>
 
-<section class="film wrap" aria-labelledby="filmHead"><div class="sh reveal"><h2 id="filmHead">See it in motion</h2><p>A first look at Tourist Lens — the moment a place reveals its story.</p></div>
-<div class="frame reveal" id="film">
-<video id="filmVideo" muted loop playsinline preload="none" poster="assets/img/city_landing.webp" aria-label="Tourist Lens cinematic preview">
-<source src="https://firebasestorage.googleapis.com/v0/b/tourist-ai-guide-prod.firebasestorage.app/o/welcome_video%2Flow.mp4?alt=media&token=b9819299-5b29-4af5-9f0c-a27d0686d796" type="video/mp4"></video>
-<div class="fade"></div>
-<button class="v-play" id="filmPlay" type="button" aria-label="Play preview video"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-<button class="v-sound" id="filmSound" type="button" aria-label="Unmute video" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" opacity=".4"/></svg></button>
-</div></section>
 
 <section id="tour" class="wrap tour"><div class="sh reveal"><div class="kicker">The app</div><h2>See it the way you'll use it</h2><p>Real screens from Tourist Lens — point, identify, and explore.</p></div>
 <div class="row reveal"><div class="copy"><div class="n">Live identification</div><h3>Know what you're looking at</h3><p>Point at any landmark and Tourist Lens identifies it in real time, with a confidence score you can actually trust.</p><ul><li>Monuments, sculptures &amp; hidden details</li><li>Ranked by confidence, never a blind guess</li><li>On-device privacy filter runs first</li></ul></div><div class="shot"><div class="duo-pair">
@@ -298,18 +273,5 @@ addEventListener('keydown',function(e){
  if(e.key==='Tab'){var f=dialog.querySelectorAll(FOCUSABLE);if(!f.length)return;var first=f[0],last=f[f.length-1];
   if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
   else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
-/* FILM VIDEO */
-var film=document.getElementById('film'),vid=document.getElementById('filmVideo'),vplay=document.getElementById('filmPlay'),vsound=document.getElementById('filmSound');
-if(film&&vid){
- var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,loaded=false;
- function load(){if(!loaded){vid.load();loaded=true}}
- function play(){load();var p=vid.play();if(p&&p.catch)p.catch(function(){});film.classList.add('playing')}
- function pause(){vid.pause()}
- vplay.addEventListener('click',play);
- vsound.addEventListener('click',function(){vid.muted=!vid.muted;var on=!vid.muted;vsound.setAttribute('aria-pressed',on);vsound.setAttribute('aria-label',on?'Mute video':'Unmute video');vsound.querySelector('path').setAttribute('opacity',on?'1':'.4');if(on&&vid.paused)play()});
- if('IntersectionObserver'in window&&!reduce){
-  new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){play()}else{pause()}})},{threshold:.5}).observe(film);
- }
-}
 })();
 </script></body></html>
