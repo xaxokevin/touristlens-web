@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tourist Lens — Apunta tu cámara. Descubre la historia.</title><meta name="description" content="Tourist Lens es un compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificación instantánea e historia narrada. Privacidad primero.">
+<title>Tourist Lens — Apunta tu cámara. Descubre la historia.</title><meta name="description" content="Tourist Lens es un compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante y escuchar su historia narrada. Privacidad primero.">
 <link rel="canonical" href="https://xaxokevin.github.io/touristlens-web/index.es.html">
 <link rel="alternate" hreflang="en" href="https://xaxokevin.github.io/touristlens-web/">
 <link rel="alternate" hreflang="es" href="https://xaxokevin.github.io/touristlens-web/index.es.html">
@@ -9,171 +9,14 @@
 <meta name="theme-color" content="#0b0910">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Tourist Lens">
 <meta property="og:url" content="https://xaxokevin.github.io/touristlens-web/index.es.html">
-<meta property="og:title" content="Tourist Lens — Apunta tu cámara. Descubre la historia."><meta property="og:description" content="Un compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificación instantánea e historia narrada. Privacidad primero.">
+<meta property="og:title" content="Tourist Lens — Apunta tu cámara. Descubre la historia."><meta property="og:description" content="Un compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante y escuchar su historia narrada. Privacidad primero.">
 <meta property="og:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tourist Lens"><meta name="twitter:description" content="Apunta tu cámara a cualquier monumento para identificación instantánea con IA e historia narrada."><meta name="twitter:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tourist Lens"><meta name="twitter:description" content="Apunta tu cámara a cualquier monumento para identificarlo al instante con IA y escucha su historia narrada."><meta name="twitter:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg">
 <link rel="preload" as="image" href="assets/img/hero-poster.webp" fetchpriority="high">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tourist Lens","applicationCategory":"TravelApplication","operatingSystem":"iOS, Android","description":"Compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificación instantánea e historia narrada.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<style>
-:root{--text:#f5f2ea;--dim:#a49f90;--gold:#cfa75a;--gold2:#f0d99a;--line:rgba(255,255,255,.1);--sp:0;--bg:#0b0910}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-background:linear-gradient(180deg,#0d1019 0%,#0a0c14 38%,#100a16 72%,#0b0910 100%)}
-.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-.blob{position:absolute;border-radius:50%;filter:blur(80px);will-change:transform}
-.b2{width:58vw;height:58vw;right:-16vw;top:78vh;opacity:.5;background:radial-gradient(circle,rgba(116,92,224,.5),transparent 62%);transform:translate3d(calc(var(--sp)*-6vw),calc(var(--sp)*-44vh),0)}
-.b3{width:54vw;height:54vw;left:18vw;top:150vh;opacity:.42;background:radial-gradient(circle,rgba(255,120,86,.42),transparent 62%);transform:translate3d(calc(var(--sp)*-22vw),calc(var(--sp)*-34vh),0)}
-.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
-background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-a{color:var(--gold2);text-decoration:none}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
-
-/* ===== NAV ===== */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
-.topbar.solid{background:rgba(11,9,16,.72);backdrop-filter:blur(16px) saturate(140%);border-bottom-color:var(--line)}
-nav{max-width:1140px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:800;letter-spacing:.04em;font-size:1.15rem}.brand span{color:var(--gold)}
-.nav-links{display:flex;align-items:center}
-.nav-links a,.nav-links button{margin-left:26px;color:rgba(245,242,234,.78);font-size:.92rem;background:none;border:none;cursor:pointer;font-family:inherit;transition:color .2s}
-.nav-links a:hover,.nav-links button:hover{color:#fff}
-.nav-links a.lang{color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem;font-weight:600;letter-spacing:.06em}
-
-/* ===== HERO (cinematic video) ===== */
-.hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;isolation:isolate}
-.hero-media{position:absolute;inset:0;z-index:-2}
-.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-.hero-scrim{position:absolute;inset:0;z-index:-1;pointer-events:none;
-background:
- radial-gradient(120% 80% at 18% 30%,rgba(8,7,12,.55),transparent 60%),
- linear-gradient(180deg,rgba(8,7,12,.6) 0%,rgba(8,7,12,.18) 30%,rgba(8,7,12,.5) 68%,var(--bg) 100%)}
-.hero-inner{padding:140px 0 120px}
-.shot .duo-pair{position:relative;width:100%;max-width:420px;height:clamp(320px,48vw,460px);margin:0 auto}
-.shot .duo-pair picture{display:contents}
-.shot .duo-pair img{position:absolute;max-width:none;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 1px rgba(255,255,255,.12))}
-.shot .duo-pair .back{width:60%;right:0;top:8px;z-index:1;animation:float 8s ease-in-out infinite;--r:4deg}
-.shot .duo-pair .front{width:72%;left:-2%;bottom:0;z-index:2;animation:float 7s ease-in-out .6s infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.22em;font-size:.7rem;color:var(--gold2);padding:.5rem 1rem;border:1px solid rgba(207,167,90,.4);border-radius:999px;margin-bottom:26px;background:rgba(207,167,90,.08);backdrop-filter:blur(6px)}
-.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
-h1{font-size:clamp(3rem,1.8rem+5vw,6rem);line-height:1.0;font-weight:800;letter-spacing:-.025em;
-background:linear-gradient(180deg,#fff 30%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;
-text-shadow:0 2px 40px rgba(0,0,0,.4);max-width:16ch}
-.lead{color:rgba(245,242,234,.82);font-size:clamp(1.05rem,.95rem+.5vw,1.3rem);max-width:46ch;margin:24px 0 36px}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:flex;align-items:center;gap:11px;padding:14px 22px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;font-family:inherit;backdrop-filter:blur(10px);transition:.25s cubic-bezier(.16,1,.3,1)}
-.btn:hover{transform:translateY(-3px);border-color:var(--gold);background:rgba(207,167,90,.16);box-shadow:0 16px 40px -16px rgba(207,167,90,.6)}
-.btn svg{width:24px;height:24px;fill:currentColor}.btn b{font-size:.98rem}.btn small{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim)}
-.trust{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:rgba(245,242,234,.6);font-size:.85rem}
-.trust span{display:inline-flex;align-items:center;gap:7px}
-.trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.scrolldown{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;color:rgba(245,242,234,.6);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
-.scrolldown svg{width:20px;height:20px;fill:none;stroke:var(--gold);stroke-width:2;animation:bob 1.8s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-.v-sound{position:absolute;bottom:24px;right:24px;z-index:3;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
-background:rgba(12,11,18,.5);border:1px solid var(--line);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;transition:.2s}
-.v-sound:hover{border-color:var(--gold);color:var(--gold)}
-.v-sound svg{width:20px;height:20px;fill:currentColor}
-
-/* ===== SECTIONS ===== */
-section{padding:0 0 110px}
-.tour{padding-top:30px}
-.sh{text-align:center;margin-bottom:40px}
-.sh .kicker{font-size:.72rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
-.sh h2{font-size:clamp(2rem,1rem+3vw,3.2rem);font-weight:700;letter-spacing:-.015em;margin-top:10px}
-.sh p{color:var(--dim);margin-top:12px;max-width:48ch;margin-inline:auto}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:46px 0}
-.row.rev .copy{order:2}.row.rev .shot{order:1}
-.shot{position:relative;display:flex;justify-content:center;align-items:center;min-height:340px}
-.shot::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;
-background:radial-gradient(circle,rgba(207,167,90,.28),rgba(116,92,224,.12) 45%,transparent 68%);filter:blur(8px)}
-.shot img{position:relative;z-index:2;width:100%;max-width:360px;height:auto;
-filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 1px rgba(255,255,255,.12));
-transition:transform .6s cubic-bezier(.16,1,.3,1)}
-.shot:hover img{transform:translateY(-10px) scale(1.025)}
-.copy .n{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;padding:.3rem .8rem;border:1px solid rgba(207,167,90,.3);border-radius:999px}
-.copy h3{font-size:clamp(1.7rem,1rem+2vw,2.5rem);margin:16px 0 14px;letter-spacing:-.015em;font-weight:700;line-height:1.1}
-.copy p{color:var(--dim);font-size:1.06rem;max-width:42ch}
-.copy ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:11px}
-.copy li{color:var(--text);font-size:.97rem;display:flex;align-items:center;gap:11px}
-.copy li::before{content:"";width:7px;height:7px;border-radius:99px;background:var(--gold);box-shadow:0 0 10px var(--gold);flex:0 0 auto}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-.reveal.in{opacity:1;transform:none}
-
-.band{position:relative;text-align:center;border:1px solid var(--line);border-radius:30px;overflow:hidden;
-background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));backdrop-filter:blur(10px);padding:64px 32px}
-.band::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 50% 0%,rgba(207,167,90,.18),transparent 60%);pointer-events:none}
-.band .lock{width:46px;height:46px;margin:0 auto 18px;display:grid;place-items:center;border-radius:14px;border:1px solid rgba(207,167,90,.4);background:rgba(207,167,90,.1);color:var(--gold2)}
-.band .lock svg{width:24px;height:24px;fill:currentColor}
-.band h2{font-size:clamp(1.8rem,1rem+2.5vw,2.7rem);font-weight:700;position:relative}
-.band p{color:var(--dim);max-width:54ch;margin:14px auto 0;font-size:1.06rem;position:relative}
-footer{border-top:1px solid var(--line);padding:42px 0;text-align:center;color:var(--dim);font-size:.9rem;position:relative;z-index:2}
-.foot-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.foot-links a{color:var(--dim)}.foot-links a:hover{color:var(--gold)}
-
-/* ===== FLOATING BANNER ===== */
-.banner{position:fixed;left:50%;bottom:22px;z-index:40;display:flex;align-items:center;gap:14px;padding:11px 12px 11px 20px;border-radius:999px;
-background:rgba(20,18,28,.6);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(140%);
-box-shadow:0 18px 50px -12px rgba(0,0,0,.7),0 0 40px -10px rgba(207,167,90,.4);
-transform:translateX(-50%) translateY(160%);opacity:0;max-width:calc(100vw - 32px);
-transition:transform .55s cubic-bezier(.16,1,.3,1),opacity .4s}
-.banner.show{transform:translateX(-50%) translateY(0);opacity:1}
-.banner .spark{color:var(--gold);font-size:1rem}
-.banner .b-txt{font-size:.92rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.banner .b-txt b{color:var(--dim);font-weight:500}
-.banner .b-cta{padding:9px 17px;border-radius:999px;font-size:.88rem;font-weight:700;color:#1a1206;background:linear-gradient(180deg,var(--gold2),var(--gold));border:none;cursor:pointer;white-space:nowrap;font-family:inherit;transition:.2s}
-.banner .b-cta:hover{filter:brightness(1.08)}
-.banner .b-x{background:none;border:none;color:var(--dim);cursor:pointer;font-size:1.2rem;line-height:1;padding:2px 6px}
-.banner .b-x:hover{color:#fff}
-
-/* ===== MODAL ===== */
-.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:24px}
-.modal.open{display:flex}
-.modal .scrim{position:absolute;inset:0;background:rgba(6,7,11,.6);backdrop-filter:blur(8px);opacity:0;transition:opacity .35s}
-.modal.open .scrim{opacity:1}
-.modal .dialog{position:relative;z-index:2;width:100%;max-width:880px;border-radius:28px;border:1px solid var(--line);
-background:linear-gradient(160deg,rgba(30,28,40,.9),rgba(14,13,20,.92));backdrop-filter:blur(26px) saturate(140%);
-box-shadow:0 50px 100px -25px rgba(0,0,0,.85),0 0 60px -20px rgba(207,167,90,.35);overflow:hidden;
-display:grid;grid-template-columns:1.05fr .95fr;transform:translateY(22px) scale(.96);opacity:0;
-transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .35s}
-.modal.open .dialog{transform:none;opacity:1}
-.modal .m-body{padding:44px 38px}
-.modal .m-body h2{font-size:clamp(1.7rem,1rem+2vw,2.3rem);font-weight:700;letter-spacing:-.01em;margin:14px 0 10px}
-.modal .m-body .m-sub{color:var(--dim);font-size:1rem;margin-bottom:24px;max-width:38ch}
-.modal .m-shot{position:relative;display:grid;place-items:center;background:radial-gradient(circle at 62% 42%,rgba(207,167,90,.22),transparent 62%);padding:18px}
-.modal .m-shot img{width:82%;max-width:300px;height:auto;filter:drop-shadow(0 34px 54px rgba(0,0,0,.6))}
-.modal .m-x{position:absolute;top:16px;right:18px;z-index:3;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.15rem;transition:.2s}
-.modal .m-x:hover{border-color:var(--gold);color:var(--gold)}
-.ea-form{display:flex;flex-direction:column;gap:13px}
-.f-row{display:flex;gap:13px;flex-wrap:wrap}
-.ea-form input,.ea-form select{flex:1;min-width:150px;padding:14px 16px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text);font-size:1rem;font-family:inherit}
-.ea-form input::placeholder{color:var(--dim)}
-.ea-form input:focus,.ea-form select:focus{outline:none;border-color:var(--gold);background:rgba(207,167,90,.08)}
-.ea-form select{cursor:pointer}.ea-form select option{background:#11131c;color:var(--text)}
-.ea-form button[type=submit]{padding:15px 26px;border:none;border-radius:13px;cursor:pointer;font-size:1rem;font-weight:700;color:#1a1206;background:linear-gradient(180deg,var(--gold2),var(--gold));font-family:inherit;transition:.25s cubic-bezier(.16,1,.3,1)}
-.ea-form button[type=submit]:hover{transform:translateY(-2px);filter:brightness(1.07)}
-.f-note{font-size:.8rem;color:var(--dim);margin-top:2px}.f-note a{color:var(--gold2)}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:920px){
- .row{grid-template-columns:1fr;gap:18px;text-align:center;padding:38px 0}
- .row.rev .copy{order:1}.row.rev .shot{order:2}
- .copy p{margin-inline:auto}.copy ul{align-items:center}
- .shot{min-height:0}.shot img{max-width:300px}
- .nav-links a:not(.lang),.nav-links button{display:none}
- .hero-inner{padding:120px 0 110px;text-align:center}.shot .duo-pair{max-width:330px;height:clamp(280px,74vw,380px)}
- h1{margin-inline:auto}.lead{margin-inline:auto}.cta{justify-content:center}.trust{justify-content:center}
-}
-@media(max-width:760px){.modal .dialog{grid-template-columns:1fr;max-width:460px}.modal .m-shot{display:none}.modal .m-body{padding:38px 24px}}
-@media(max-width:560px){
- .banner{left:16px;right:16px;bottom:14px;transform:translateY(160%);padding:10px 12px 10px 16px}.banner.show{transform:translateY(0)}.banner .b-txt{font-size:.82rem}
- .f-row{flex-direction:column}.shot img{max-width:255px}.v-sound{bottom:16px;right:16px}.scrolldown{display:none}
- .cta{flex-direction:column;align-items:stretch}.btn{justify-content:center}
-}
-@media(prefers-reduced-motion:reduce){.scrolldown svg{animation:none}.blob{transform:none!important}.reveal{opacity:1;transform:none}*{transition:none!important}}
-</style></head><body>
-<div class="bg"><div class="blob b2"></div><div class="blob b3"></div></div><div class="grain"></div>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tourist Lens","applicationCategory":"TravelApplication","operatingSystem":"iOS, Android","description":"Compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante y escuchar su historia narrada.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head><body>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div><div class="grain"></div>
 
 <div class="topbar" id="topbar"><nav><div class="brand">Tourist<span>&nbsp;Lens</span></div>
 <div class="nav-links"><a href="#tour">Funciones</a><button type="button" data-ea-open>Acceso anticipado</button><a href="legal/privacy/es.html">Privacidad</a><a class="lang" href="index.html">EN</a></div></nav></div>
@@ -185,89 +28,82 @@ transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .35s}
 </div>
 <div class="hero-scrim"></div>
 <div class="wrap"><div class="hero-inner">
-<span class="eyebrow">Compañero de Viaje con IA</span>
-<h1>Apunta tu cámara. Descubre la historia.</h1>
+<span class="eyebrow">Compañero de viaje con IA</span>
+<h1 data-kinetic>Apunta tu cámara. Descubre la historia.</h1>
 <p class="lead">Apunta a cualquier monumento, escultura o calle. Tourist Lens lo identifica y narra su historia en segundos — antes de que bajes el teléfono.</p>
 <div class="cta">
-<a class="btn" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.36 12.78c.02 2.36 2.07 3.14 2.1 3.16-.02.06-.33 1.13-1.08 2.23-.65.95-1.32 1.9-2.38 1.92-1.04.02-1.38-.62-2.57-.62-1.19 0-1.56.6-2.55.64-1.02.04-1.8-1.03-2.46-1.98-1.34-1.95-2.37-5.5-.99-7.9.68-1.19 1.9-1.95 3.23-1.97 1-.02 1.95.68 2.57.68.61 0 1.77-.84 2.98-.72.51.02 1.94.21 2.86 1.56-.07.05-1.71 1-1.69 2.98M14.4 5.8c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.2-.51.59-.96 1.53-.84 2.44.88.07 1.79-.45 2.34-1.11"/></svg><span><small>Descárgalo en</small><b>App Store</b></span></a>
-<button class="btn" type="button" data-ea-open><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Disponible en</small><b>Google Play</b></span></button>
+<a class="btn" data-magnetic href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.36 12.78c.02 2.36 2.07 3.14 2.1 3.16-.02.06-.33 1.13-1.08 2.23-.65.95-1.32 1.9-2.38 1.92-1.04.02-1.38-.62-2.57-.62-1.19 0-1.56.6-2.55.64-1.02.04-1.8-1.03-2.46-1.98-1.34-1.95-2.37-5.5-.99-7.9.68-1.19 1.9-1.95 3.23-1.97 1-.02 1.95.68 2.57.68.61 0 1.77-.84 2.98-.72.51.02 1.94.21 2.86 1.56-.07.05-1.71 1-1.69 2.98M14.4 5.8c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.2-.51.59-.96 1.53-.84 2.44.88.07 1.79-.45 2.34-1.11"/></svg><span><small>Download on</small><b>App Store</b></span></a>
+<button class="btn" data-magnetic type="button" data-ea-open><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></button>
 </div>
-<div class="trust"><span>Gratis para empezar</span><span>Sin cuenta</span><span>Privacidad en el dispositivo</span></div>
+<div class="trust"><span>Gratis para empezar</span><span>Sin cuenta necesaria</span><span>Privacidad en el dispositivo</span></div>
 </div></div>
-<a class="scrolldown" href="#tour" aria-label="Bajar a funciones"><span>Explorar</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+<a class="scrolldown" href="#proof" aria-label="Scroll to explore"><span>Explorar</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
 </header>
 
+<section id="proof" class="wrap"><div class="proof-grid">
+<div class="proof-tile glass reveal"><div class="ico">⚡</div><h3>Identificación instantánea</h3><p>Sabes qué estás viendo en tiempo real, con una puntuación de confianza fiable.</p></div>
+<div class="proof-tile glass reveal"><div class="ico">🌐</div><h3>8 idiomas</h3><p>Cada narración, traducida y narrada en tu idioma.</p></div>
+<div class="proof-tile glass reveal"><div class="ico">🔒</div><h3>Privacidad primero</h3><p>Un filtro en el dispositivo revisa cada imagen antes de que salga de tu teléfono.</p></div>
+<div class="proof-tile glass reveal"><div class="ico">🎟️</div><h3>Pases, no suscripciones</h3><p>Paga por tiempo cuando viajas. Sin renovación automática, nunca.</p></div>
+</div></section>
 
-<section id="tour" class="wrap tour"><div class="sh reveal"><div class="kicker">La app</div><h2>Míralo como lo vas a usar</h2><p>Pantallas reales de Tourist Lens — apunta, identifica y explora.</p></div>
-<div class="row reveal"><div class="copy"><div class="n">Identificación en vivo</div><h3>Sabe qué estás viendo</h3><p>Apunta a cualquier monumento y Tourist Lens lo identifica en tiempo real, con un nivel de confianza fiable.</p><ul><li>Monumentos, esculturas y detalles ocultos</li><li>Ordenado por confianza, nunca a ciegas</li><li>Filtro de privacidad en el dispositivo primero</li></ul></div><div class="shot"><div class="duo-pair">
-<picture><source srcset="assets/img/camera_result.webp" type="image/webp"><img class="back" src="assets/img/camera_result.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Resultado de identificación de un monumento"></picture>
-<picture><source srcset="assets/img/camera_scan.webp" type="image/webp"><img class="front" src="assets/img/camera_scan.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Cámara escaneando un monumento en vivo"></picture>
+<section id="tour"><div class="wrap">
+<div class="sh reveal"><div class="kicker">La app</div><h2>Míralo tal como lo usarás</h2><p>Pantallas reales de Tourist Lens — apunta, identifica y explora.</p></div>
+<div class="row reveal"><div class="copy"><div class="n">Identificación en vivo</div><h3>Sabes qué estás viendo</h3><p>Apunta a cualquier monumento y Tourist Lens lo identifica en tiempo real, con una puntuación de confianza en la que puedes confiar.</p><ul><li>Monumentos, esculturas y detalles ocultos</li><li>Ordenado por confianza, nunca una suposición</li><li>El filtro de privacidad en el dispositivo se ejecuta primero</li></ul></div><div class="shot" data-parallax><div class="duo-pair">
+<picture><source srcset="assets/img/camera_result.webp" type="image/webp"><img class="back" src="assets/img/camera_result.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Landmark identification result"></picture>
+<picture><source srcset="assets/img/camera_scan.webp" type="image/webp"><img class="front" src="assets/img/camera_scan.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Live camera scanning a landmark"></picture>
 </div></div></div>
-<div class="row rev reveal"><div class="copy"><div class="n">Narración y chat con IA</div><h3>La historia tras la piedra</h3><p>Escucha una historia rica y fundamentada de cada lugar — y pregunta lo que quieras. Una guía local en tu bolsillo.</p><ul><li>Narración en 8 idiomas</li><li>Pregunta en lenguaje natural</li><li>Cada descubrimiento guardado en tu historial</li></ul></div><div class="shot"><picture><source srcset="assets/img/history.webp" type="image/webp"><img src="assets/img/history.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Pantalla de historial y narración"></picture></div></div>
-<div class="row reveal"><div class="copy"><div class="n">Tu viaje, en el mapa</div><h3>Cada captura, en el mapa</h3><p>Tus descubrimientos cobran vida en un mapa dinámico — una versión viva de tu historial. Desliza por tus capturas y el mapa viaja contigo, colocando el punto justo donde tomaste cada foto.</p><ul><li>Un mapa dinámico de todo lo que has identificado</li><li>Desliza el carrusel — el punto sigue cada foto</li><li>Tu historial de viaje, lugar a lugar</li></ul></div><div class="shot"><picture><source srcset="assets/img/map.webp" type="image/webp"><img src="assets/img/map.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Mapa de tus descubrimientos capturados, sincronizado con el carrusel de fotos"></picture></div></div>
-<div class="row rev reveal"><div class="copy"><div class="n">Pases y pasaporte</div><h3>Colecciona cada lugar que descubras</h3><p>Sella un pasaporte digital mientras exploras y desbloquea escaneo ilimitado con pases honestos por tiempo.</p><ul><li>Pagas por tiempo, no suscripciones</li><li>Descubrimientos cifrados en tu dispositivo</li><li>Sin renovación automática ni sorpresas</li></ul></div><div class="shot"><picture><source srcset="assets/img/passport.webp" type="image/webp"><img src="assets/img/passport.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Pasaporte de viaje con sellos recogidos"></picture></div></div>
-</section>
+<div class="row rev reveal"><div class="copy"><div class="n">Narración e IA</div><h3>La historia detrás de la piedra</h3><p>Escucha una historia rica y fundamentada de cada lugar — y luego pregunta lo que quieras. Es un guía local que cabe en tu bolsillo.</p><ul><li>Narrado en 8 idiomas</li><li>Haz preguntas de seguimiento en lenguaje natural</li><li>Cada descubrimiento se guarda en tu historial</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/history.webp" type="image/webp"><img src="assets/img/history.png" width="1920" height="1920" loading="lazy" decoding="async" alt="History and narration screen"></picture></div></div>
+<div class="row reveal"><div class="copy"><div class="n">Tu viaje, en el mapa</div><h3>Cada captura, en el mapa</h3><p>Tus descubrimientos cobran vida en un mapa dinámico — una versión viva de tu historial. Desliza por tus capturas y el mapa viaja contigo, marcando exactamente dónde se tomó cada foto.</p><ul><li>Un mapa dinámico de todo lo que has identificado</li><li>Desliza el carrusel — el marcador sigue cada foto</li><li>Tu historial de viaje, lugar por lugar</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/map.webp" type="image/webp"><img src="assets/img/map.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Map of your captured discoveries, synced to the photo carousel"></picture></div></div>
+<div class="row rev reveal"><div class="copy"><div class="n">Pases y pasaporte</div><h3>Colecciona cada lugar que descubras</h3><p>Sella un pasaporte digital mientras exploras y desbloquea escaneo ilimitado con pases honestos por tiempo.</p><ul><li>Paga por tiempo, no por suscripciones</li><li>Descubrimientos cifrados en tu dispositivo</li><li>Sin renovación automática, sin sorpresas</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/passport.webp" type="image/webp"><img src="assets/img/passport.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Travel passport with collected stamps"></picture></div></div>
+</div></section>
 
-<section class="wrap"><div class="band reveal"><div class="lock"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm3 8H9V6a3 3 0 0 1 6 0z"/></svg></div><h2>Privacidad por diseño</h2><p>Un modelo local revisa cada imagen en tu dispositivo antes de enviar nada. Tus datos son tuyos — cifrado AES-256 y certificate pinning, de extremo a extremo.</p></div></section>
+<section class="wrap"><div class="privacy-grid glass reveal">
+<div class="privacy-copy"><div class="lock"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm3 8H9V6a3 3 0 0 1 6 0z"/></svg></div>
+<h2>Privacidad, por diseño</h2><p>Un modelo local revisa cada imagen en tu dispositivo antes de enviarla. Tus datos son tuyos — cifrado AES-256 y certificate pinning, de principio a fin.</p></div>
+<div class="privacy-flow">
+<div class="flow-step"><b>Filtro de IA en el dispositivo</b><span>Se ejecuta en tu teléfono antes de transmitir cualquier imagen.</span></div>
+<div class="flow-step"><b>Canal cifrado</b><span>Solo viajan las imágenes relevantes para turismo, por conexiones con certificate pinning.</span></div>
+<div class="flow-step"><b>Las claves nunca salen del dispositivo</b><span>Las claves de cifrado AES-256 nunca abandonan el enclave seguro de tu teléfono.</span></div>
+</div>
+</div></section>
 
-<footer><div class="foot-links"><a href="legal/privacy/es.html">Política de Privacidad</a><a href="legal/terms/es.html">Términos y Condiciones</a><a href="mailto:tourist.ai.guide@gmail.com">Contacto</a></div><p>© 2026 Tourist Lens. Todos los derechos reservados.</p></footer>
+<section class="wrap"><div class="closing glass reveal">
+<h2>Tu próximo viaje, ya narrado.</h2>
+<p>Gratis para empezar. Sin cuenta necesaria. Apunta tu cámara y deja que Tourist Lens te cuente la historia.</p>
+<div class="cta">
+<a class="btn" data-magnetic href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.36 12.78c.02 2.36 2.07 3.14 2.1 3.16-.02.06-.33 1.13-1.08 2.23-.65.95-1.32 1.9-2.38 1.92-1.04.02-1.38-.62-2.57-.62-1.19 0-1.56.6-2.55.64-1.02.04-1.8-1.03-2.46-1.98-1.34-1.95-2.37-5.5-.99-7.9.68-1.19 1.9-1.95 3.23-1.97 1-.02 1.95.68 2.57.68.61 0 1.77-.84 2.98-.72.51.02 1.94.21 2.86 1.56-.07.05-1.71 1-1.69 2.98M14.4 5.8c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.2-.51.59-.96 1.53-.84 2.44.88.07 1.79-.45 2.34-1.11"/></svg><span><small>Download on</small><b>App Store</b></span></a>
+<button class="btn" data-magnetic type="button" data-ea-open><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></button>
+</div>
+</div></section>
 
-<div class="banner" id="banner" role="region" aria-label="Consigue acceso anticipado">
-<span class="spark">✦</span><span class="b-txt"><b>Sé de los primeros ·</b> Acceso anticipado</span>
-<button class="b-cta" type="button" data-ea-open>Solicitar</button>
-<button class="b-x" id="bannerX" type="button" aria-label="Descartar">✕</button></div>
+<footer class="main-foot"><div class="wrap">
+<div class="foot-top"><div class="brand">Tourist<span>&nbsp;Lens</span></div>
+<div class="foot-links"><a href="legal/privacy/es.html">Política de Privacidad</a><a href="legal/terms/es.html">Términos y Condiciones</a><a href="mailto:tourist.ai.guide@gmail.com">Contacto</a></div></div>
+<p class="foot-copy">© 2026 Tourist Lens. Todos los derechos reservados.</p>
+</div></footer>
+
+<div class="banner" id="banner" role="region" aria-label="Get early access">
+<span class="spark">✦</span><span class="b-txt"><b>Be first to explore ·</b> Early access</span>
+<button class="b-cta" type="button" data-ea-open>Get access</button>
+<button class="b-x" id="bannerX" type="button" aria-label="Dismiss">✕</button></div>
 
 <div class="modal" id="eaModal" role="dialog" aria-modal="true" aria-labelledby="eaTitle">
 <div class="scrim" data-ea-close></div>
 <div class="dialog">
-<button class="m-x" type="button" data-ea-close aria-label="Cerrar">✕</button>
-<div class="m-body"><span class="eyebrow">Compañero de Viaje con IA</span>
+<button class="m-x" type="button" data-ea-close aria-label="Close">✕</button>
+<div class="m-body"><span class="eyebrow">Compañero de viaje con IA</span>
 <h2 id="eaTitle">Consigue acceso anticipado</h2><p class="m-sub">Únete al programa de testers y sé de los primeros en explorar con Tourist Lens. Te añadiremos a la beta de Android.</p>
 <form class="ea-form" action="https://formsubmit.co/tourist.ai.guide@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="New Tourist Lens early-access tester">
 <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
 <input type="hidden" name="_next" value="https://xaxokevin.github.io/touristlens-web/thanks.html">
-<div class="f-row"><input type="text" name="name" placeholder="Tu nombre (opcional)" autocomplete="name"><input type="email" name="email" id="eaEmail" required placeholder="Email de tu cuenta de la tienda" autocomplete="email"></div>
-<div class="f-row"><select name="platform" required aria-label="Elige tu dispositivo"><option value="" disabled selected>Elige tu dispositivo</option><option value="Android">Android (Google Play)</option></select><button type="submit">Solicitar acceso</button></div>
-<p class="f-note">Usamos tu email solo para añadirte como tester de la beta. Sin spam. · <a href="legal/privacy/es.html">Política de Privacidad</a></p>
+<div class="f-row"><input type="text" name="name" placeholder="Tu nombre (opcional)" autocomplete="name"><input type="email" name="email" id="eaEmail" required placeholder="Email para tu cuenta de la tienda" autocomplete="email"></div>
+<div class="f-row"><select name="platform" required aria-label="Choose your device"><option value="" disabled selected>Elige tu dispositivo</option><option value="Android">Android (Google Play)</option></select><button type="submit">Solicitar acceso</button></div>
+<p class="f-note">Solo usamos tu email para añadirte como tester. Sin spam. · <a href="legal/privacy/es.html">Política de Privacidad</a></p>
 </form></div>
-<div class="m-shot"><picture><source srcset="assets/img/petra_landing.webp" type="image/webp"><img src="assets/img/petra_landing.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Pantalla de bienvenida de Tourist Lens"></picture></div>
+<div class="m-shot"><picture><source srcset="assets/img/petra_landing.webp" type="image/webp"><img src="assets/img/petra_landing.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Tourist Lens welcome screen"></picture></div>
 </div></div>
 
-<script>
-(function(){
-var r=document.documentElement,t=false;
-function u(){var h=document.body.scrollHeight-innerHeight;r.style.setProperty('--sp',h>0?(scrollY/h).toFixed(4):0);t=false}
-addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u();
-
-var topbar=document.getElementById('topbar');
-function onScroll(){if(scrollY>40)topbar.classList.add('solid');else topbar.classList.remove('solid')}
-addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-if('IntersectionObserver'in window){
- var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:.18});
- document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
-}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
-
-var hv=document.getElementById('heroVideo');
-if(hv){var p=hv.play();if(p&&p.catch)p.catch(function(){})}
-
-var banner=document.getElementById('banner'),modal=document.getElementById('eaModal'),email=document.getElementById('eaEmail'),shown=false,KEY='tl_banner_dismissed';
-function maybeShow(){if(shown||sessionStorage.getItem(KEY))return;if(scrollY>innerHeight*0.6){banner.classList.add('show');shown=true}}
-addEventListener('scroll',maybeShow,{passive:true});maybeShow();
-document.getElementById('bannerX').addEventListener('click',function(){banner.classList.remove('show');sessionStorage.setItem(KEY,'1')});
-
-var dialog=modal.querySelector('.dialog'),lastFocus=null;
-var FOCUSABLE='a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
-function openM(){lastFocus=document.activeElement;modal.classList.add('open');document.body.style.overflow='hidden';setTimeout(function(){email&&email.focus()},60)}
-function closeM(){modal.classList.remove('open');document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus()}
-document.querySelectorAll('[data-ea-open]').forEach(function(b){b.addEventListener('click',openM)});
-document.querySelectorAll('[data-ea-close]').forEach(function(b){b.addEventListener('click',closeM)});
-addEventListener('keydown',function(e){
- if(!modal.classList.contains('open'))return;
- if(e.key==='Escape'){closeM();return}
- if(e.key==='Tab'){var f=dialog.querySelectorAll(FOCUSABLE);if(!f.length)return;var first=f[0],last=f[f.length-1];
-  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
-  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
-})();
-</script></body></html>
+<script src="assets/js/main.js"></script>
+</body></html>
