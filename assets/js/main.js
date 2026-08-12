@@ -118,6 +118,7 @@ if (topbar) {
 
   if (modal) {
     var dialog = modal.querySelector('.dialog');
+    if (!dialog) return;
     var email = document.getElementById('eaEmail');
     var lastFocus = null;
     var FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
