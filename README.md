@@ -6,7 +6,10 @@ Live site (GitHub Pages): `https://xaxokevin.github.io/touristlens-web/`
 
 ## Structure
 - `index.html` — landing (what it is, features, store links)
-- `assets/css/styles.css` — glassmorphism dark-luxury theme
+- `index.es.html` — Spanish landing page
+- `thanks.html` — early-access confirmation page
+- `assets/css/styles.css` — shared design system (glassmorphism dark-luxury theme), used by the landing pages and the legal pages
+- `assets/js/main.js` — shared behavior script (nav, reveal animations, early-access modal, etc.)
 - `legal/privacy/<lang>.html` — Privacy Policy (en, es, fr, it, de, pt, zh, ja)
 - `legal/terms/<lang>.html` — Terms & Conditions (8 languages)
 
