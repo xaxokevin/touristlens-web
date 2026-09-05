@@ -95,60 +95,6 @@ if (topbar) {
   });
 })();
 
-/* early-access banner + modal */
-(function initEarlyAccess(){
-  var banner = document.getElementById('banner');
-  var modal = document.getElementById('eaModal');
-  if (!banner && !modal) return;
-
-  if (banner) {
-    var KEY = 'tl_banner_dismissed', shown = false;
-    function maybeShow(){
-      if (shown || sessionStorage.getItem(KEY)) return;
-      if (scrollY > innerHeight * 0.6) { banner.classList.add('show'); shown = true; }
-    }
-    addEventListener('scroll', maybeShow, {passive:true});
-    maybeShow();
-    var bx = document.getElementById('bannerX');
-    if (bx) bx.addEventListener('click', function(){
-      banner.classList.remove('show');
-      sessionStorage.setItem(KEY, '1');
-    });
-  }
-
-  if (modal) {
-    var dialog = modal.querySelector('.dialog');
-    if (!dialog) return;
-    var email = document.getElementById('eaEmail');
-    var lastFocus = null;
-    var FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
-    function openM(){
-      lastFocus = document.activeElement;
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      setTimeout(function(){ email && email.focus(); }, 60);
-    }
-    function closeM(){
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
-    }
-    document.querySelectorAll('[data-ea-open]').forEach(function(b){ b.addEventListener('click', openM); });
-    document.querySelectorAll('[data-ea-close]').forEach(function(b){ b.addEventListener('click', closeM); });
-    addEventListener('keydown', function(e){
-      if (!modal.classList.contains('open')) return;
-      if (e.key === 'Escape') { closeM(); return; }
-      if (e.key === 'Tab') {
-        var f = dialog.querySelectorAll(FOCUSABLE);
-        if (!f.length) return;
-        var first = f[0], last = f[f.length - 1];
-        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-      }
-    });
-  }
-})();
-
 /* hero video autoplay retry */
 var hv = document.getElementById('heroVideo');
 if (hv) { var p = hv.play(); if (p && p.catch) p.catch(function(){}); }
