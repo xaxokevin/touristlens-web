@@ -14,29 +14,46 @@
 <article class="legal glass">
 <nav class="lang-switch"><a href="en.html">English</a> · <a href="es.html">Español</a> · <strong>Français</strong> · <a href="it.html">Italiano</a> · <a href="de.html">Deutsch</a> · <a href="pt.html">Português</a> · <a href="zh.html">中文</a> · <a href="ja.html">日本語</a></nav>
 <h2>Politique de Confidentialité</h2>
-<p>Cette politique de confidentialité s'applique à l'application Tourist Lens (ci-après dénommée &quot;Application&quot;) pour appareils mobiles, créée par xaxo (ci-après dénommé &quot;Prestataire de Services&quot;) en tant que service Freemium.</p>
+<p>Cette politique de confidentialité s'applique à l'application Tourist Lens (ci-après dénommée &quot;Application&quot;) pour appareils mobiles, créée par xaxo (ci-après dénommé &quot;Prestataire de Services&quot;) en tant que service Freemium. Ce service est destiné à être utilisé &quot;EN L'ÉTAT&quot;.</p>
 <h2>Collecte et Utilisation des Informations</h2>
-<p>L'Application collecte des informations lorsque vous la téléchargez et l'utilisez (adresse IP, temps passé, système d'exploitation).</p>
-<p>L'Application collecte la localisation de votre appareil pour :</p>
+<p>L'Application collecte des informations lorsque vous la téléchargez et l'utilisez. Ces informations peuvent inclure des données telles que :</p>
 <ul>
-<li><strong>Services de Géolocalisation</strong> : Contenus personnalisés et recommandations.</li>
-<li><strong>Fusion de Capteurs</strong> : Traitement des données du magnétomètre, de l'accéléromètre et du GPS pour identifier les monuments.</li>
-<li><strong>Analyses et Améliorations</strong> : Télémétrie anonymisée conservée 7 jours maximum.</li>
+<li>L'adresse de protocole Internet de votre appareil (ex. adresse IP)</li>
+<li>Les pages de l'Application que vous visitez, l'heure et la date de votre visite, le temps passé sur ces pages</li>
+<li>Le temps total passé sur l'Application</li>
+<li>Le système d'exploitation utilisé sur votre appareil mobile</li>
 </ul>
-<p>L'Application utilise la caméra pour l'identification visuelle avec filtrage local (<strong>Google ML Kit</strong>) et vérification <strong>Google SafeSearch</strong>.</p>
+<p>L'Application collecte la localisation de votre appareil, ce qui aide le Prestataire de Services à déterminer votre position géographique approximative et à l'utiliser des manières suivantes :</p>
+<ul>
+<li><strong>Services de Géolocalisation</strong> : Le Prestataire de Services utilise les données de localisation (via Google Maps Platform) pour fournir des fonctionnalités telles que des contenus personnalisés, des recommandations pertinentes et des services de navigation basés sur la localisation.</li>
+<li><strong>Fusion de Capteurs</strong> : Pour déterminer exactement quel monument vous observez, l'Application traite les données du magnétomètre (boussole) et de l'accéléromètre en conjonction avec les coordonnées GPS.</li>
+<li><strong>Analyses et Améliorations</strong> : La télémétrie de session et de performance (ex. scores de confiance d'identification, temps de traitement, utilisation des fonctionnalités) aide le Prestataire de Services à analyser le comportement des utilisateurs, identifier les tendances et améliorer la performance globale de l'Application. Les coordonnées GPS précises sont enregistrées <strong>uniquement</strong> dans cette télémétrie lorsque vous signalez explicitement une identification incorrecte et soumettez une correction — les scans quotidiens réussis ne stockent pas votre position exacte. Cette télémétrie est automatiquement supprimée au bout de 7 jours (voir <strong>Rétention des Données</strong>).</li>
+<li><strong>Services Tiers</strong> : Périodiquement, le Prestataire de Services peut transmettre des données de localisation anonymisées à des services externes (comme Google Analytics) pour améliorer l'Application.</li>
+</ul>
+<p>L'Application utilise l'appareil photo de votre appareil pour l’identification visuelle des monuments et lieux d'intérêt.</p>
+<ul>
+<li><strong>Filtrage Edge AI</strong> : Avant qu'une image ne quitte votre appareil, un modèle local sur l'appareil (<strong>Google ML Kit Image Labeling</strong>) l'évalue. Les captures de mauvaise qualité (floues ou sombres) et le contenu non touristique (comme les captures d'écran) sont filtrés localement. Les images pertinentes sont transmises via des canaux chiffrés à nos partenaires Vision AI dans le cloud, où un filtre supplémentaire <strong>Google SafeSearch</strong> vérifie l'absence de contenu sensible. Les images sont utilisées uniquement pour identifier des monuments, non pour identifier des individus.</li>
+<li><strong>Traitement Cloud</strong> : Les images traitées pour l'identification sont transmises via des canaux chiffrés à nos partenaires Vision AI. Si vous choisissez de sauvegarder ou de partager du contenu spécifique, ces images peuvent être stockées sur les serveurs du Prestataire de Services (Firebase Storage) avec des contrôles d'accès stricts.</li>
+</ul>
+<p>L'Application utilise des technologies d'Intelligence Artificielle (IA), notamment Google Gemini, pour fournir un contexte conversationnel, des narrations historiques et des recommandations personnalisées. Vos interactions de chat et saisies sont traitées par les services d'IA générative de Google. En utilisant ces fonctionnalités, vous reconnaissez que vos données seront traitées par des modèles d'IA tiers. Tout traitement d'IA est effectué conformément à cette politique de confidentialité et aux lois applicables.</p>
 <h2>Publicité et Annonces Récompensées (Google AdMob)</h2>
-<p>L'Application intègre <strong>Google AdMob</strong> pour diffuser des annonces vidéo récompensées facultatives (crédits Kokoro ou identifications bonus) :</p>
+<p>L'Application intègre <strong>Google AdMob</strong> (Google Mobile Ads SDK) pour diffuser des annonces vidéo récompensées facultatives (ex. pour des crédits audio Kokoro ou des identifications supplémentaires) :</p>
 <ul>
-<li><strong>Identifiants et Consentement</strong> : Traitement conforme des identifiants publicitaires et de l'adresse IP.</li>
-<li><strong>Consentement RGPD / UMP</strong> : Gestion transparente du consentement dans l'EEE via la Google User Messaging Platform (UMP). Paramètres modifiables à tout moment dans l'application.</li>
-<li><strong>Vérification Côté Serveur (SSV)</strong> : Attribution des récompenses validée cryptographiquement côté serveur.</li>
+<li><strong>Identifiants et Consentement</strong> : Selon votre région et vos préférences, Google AdMob et ses partenaires publicitaires peuvent traiter des identifiants d'appareil (comme l'IDFA sur iOS ou le Google Advertising ID sur Android), l'adresse IP et les données d'interaction pour diffuser des annonces adaptées et prévenir la fraude.</li>
+<li><strong>Consentement RGPD / UMP</strong> : Dans les régions où le consentement est requis par la loi (EEE, Royaume-Uni, Suisse), nous utilisons la plateforme Google User Messaging Platform (UMP) SDK pour recueillir et gérer votre consentement. Vous pouvez modifier vos choix à tout moment dans les Réglages de l'application.</li>
+<li><strong>Vérification Côté Serveur (SSV)</strong> : Lorsqu'une annonce récompensée est terminée, un jeton de vérification cryptographique est traité côté serveur pour valider la récompense sans exposer vos données sensibles aux annonceurs.</li>
 </ul>
-<h2>Confidentialité et Sécurité</h2>
+<h2>Confidentialité dès la Conception &amp; Sécurité Avancée</h2>
 <ul>
-<li><strong>Chiffrement Client AES-256-GCM</strong> pour les données personnelles.</li>
-<li><strong>Certificate Pinning</strong> et <strong>Firebase App Check</strong>.</li>
+<li><strong>Chiffrement Côté Client AES-256-GCM</strong> : Vos informations personnelles sensibles (adresse e-mail, messages de chat, noms des lieux découverts) sont protégées par un chiffrement client. Les clés cryptographiques sont stockées exclusivement dans le coffre-fort sécurisé de votre appareil (Keychain/EncryptedSharedPreferences).</li>
+<li><strong>Assainissement des Données PII</strong> : Tous les journaux de télémétrie et de débogage sont automatiquement assainis sur votre appareil avant transmission pour remplacer toute donnée d'identification personnelle par des identifiants génériques.</li>
+<li><strong>Certificate Pinning</strong> : L'Application utilise le <strong>SSL/TLS Certificate Pinning</strong> pour toutes ses communications avec nos back-ends d'IA, garantissant que vos données atteignent uniquement nos serveurs vérifiés.</li>
+<li><strong>Ancrage d'Appareil &amp; Intégrité de Session</strong> : Pour empêcher l'utilisation non autorisée, l'Application utilise un identifiant matériel haché à sens unique (<strong>Device Anchor</strong>) et la protection de compte Schrödinger pour vérifier l'intégrité de la session.</li>
+<li><strong>Firebase App Check</strong> : Nous intégrons Firebase App Check pour vérifier que toutes les requêtes proviennent d'une version officielle non modifiée de l'application Tourist Lens sur un appareil de confiance.</li>
 </ul>
+<p>Pour une meilleure expérience, le Prestataire de Services peut vous demander votre adresse e-mail lors de l'inscription (via Firebase Auth). Si vous commencez en tant qu'Invité, votre historique de scans est stocké de manière anonyme ; lors de votre inscription, ces données sont transférées en toute sécurité vers votre nouveau compte via la liaison de compte Firebase.</p>
 <h2>Accès des Tiers</h2>
+<p>Seules des données agrégées et anonymisées sont périodiquement transmises à des services externes afin d'aider le Prestataire de Services à améliorer l'Application. Liens vers les politiques de confidentialité des tiers :</p>
 <ul>
 <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
 <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li>
@@ -46,8 +63,32 @@
 <li><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google Gemini API</a></li>
 <li><a href="https://cloud.google.com/terms" target="_blank" rel="noopener">Google Cloud Vision AI</a></li>
 </ul>
-<h2>Suppression de Compte</h2>
-<p>Suppression directe dans l'application (Paramètres &gt; Profil &gt; Supprimer le compte) ou par e-mail à <strong>tourist.ai.guide@gmail.com</strong>.</p>
+<h2>Vos Droits et le Fondement Juridique du Traitement</h2>
+<p>Selon votre juridiction, vous disposez de droits en vertu des lois sur la protection des données (RGPD UE/Royaume-Uni, CCPA/CPRA Californie) :</p>
+<ul>
+<li><strong>Accéder</strong> à une copie de vos données personnelles ;</li>
+<li><strong>Rectifier</strong> des données inexactes ;</li>
+<li><strong>Supprimer</strong> vos données (voir <strong>Rétention des Données et Politique de Suppression de Compte</strong> ci-dessous) ;</li>
+<li><strong>Limiter</strong> ou <strong>vous opposer</strong> à certains traitements ;</li>
+<li><strong>Porter</strong> vos données vers un autre service dans un format structuré et lisible par machine ;</li>
+<li>Vous <strong>opposer à la vente ou au partage</strong> de vos informations personnelles (résidents de Californie) — le Prestataire de Services ne vend pas d'informations personnelles contre rémunération ; le partage publicitaire avec Google AdMob peut être limité dans les réglages de l'application ;</li>
+<li><strong>Non-discrimination</strong> lors de l'exercice de l'un quelconque de ces droits.</li>
+</ul>
+<p>Pour exercer l'un de ces droits, contactez-nous à <strong>tourist.ai.guide@gmail.com</strong>. Lorsque le RGPD s'applique, nous traitons les données sur les bases légales suivantes : <strong>exécution d'un contrat</strong> (compte, abonnements, crédits), <strong>intérêt légitime</strong> (prévention de la fraude, sécurité, amélioration), <strong>consentement</strong> (publicité et télémétrie, révocables dans Réglages) et <strong>obligation légale</strong>.</p>
+<p><strong>Transferts Internationaux de Données</strong> : L'infrastructure du Prestataire de Services (Google Firebase, Google Cloud) peut traiter et stocker vos données aux États-Unis et dans d'autres pays. Ces transferts s'appuient sur des garanties appropriées telles que les Clauses Contractuelles Types de la Commission européenne ou une décision d'adéquation.</p>
+<p><strong>Contact UE/Royaume-Uni/Suisse</strong> : En tant que petite équipe de développement sans Délégué à la Protection des Données distinct, <strong>tourist.ai.guide@gmail.com</strong> est le point de contact pour toutes les demandes de confidentialité (EEE, Royaume-Uni, Suisse).</p>
+<h2>Droits de Retrait (Opt-Out)</h2>
+<p>Vous pouvez arrêter toute collecte d'informations en désinstallant l'Application. Vous pouvez également désactiver le partage de télémétrie de session (activé par défaut) à tout moment dans les Réglages de l'Application et gérer vos préférences publicitaires.</p>
+<h2>Politique de Rétention des Données et Suppression de Compte</h2>
+<p>Le Prestataire de Services conserve les données fournies par l'utilisateur (profil, tampons, plans enregistrés) aussi longtemps que vous utilisez l'Application et pendant une durée raisonnable par la suite.</p>
+<p><strong>Télémétrie de Session et de Scan :</strong> Les enregistrements de télémétrie technique et de diagnostic de scan sont automatiquement et définitivement supprimés au bout de <strong>7 jours</strong>.</p>
+<h2>Comment Demander la Suppression de Votre Compte :</h2>
+<p>Vous pouvez demander la suppression de votre compte de deux manières :</p>
+<ol>
+<li><strong>Dans l'application :</strong> Allez dans Réglages &gt; Profil &gt; Supprimer le compte. Cela déclenche immédiatement la suppression permanente de votre profil, de vos tampons et de vos données chiffrées. La télémétrie suit son expiration automatique sur 7 jours.</li>
+<li><strong>Par e-mail :</strong> Contactez-nous à <strong>tourist.ai.guide@gmail.com</strong>. Votre demande sera traitée dans un délai raisonnable (généralement moins de 7 jours).</li>
+</ol>
+<p><strong>Demander une Copie de Vos Données :</strong> Pour demander une copie de vos données de télémétrie ou de diagnostic, contactez <strong>tourist.ai.guide@gmail.com</strong>.</p>
 <p>Date d'effet : 2026-09-15</p>
 <hr>
 </article>

@@ -14,22 +14,102 @@
 <article class="legal glass">
 <nav class="lang-switch"><a href="en.html">English</a> · <a href="es.html">Español</a> · <a href="fr.html">Français</a> · <strong>Italiano</strong> · <a href="de.html">Deutsch</a> · <a href="pt.html">Português</a> · <a href="zh.html">中文</a> · <a href="ja.html">日本語</a></nav>
 <h2>Informativa sulla Privacy</h2>
-<p>Questa informativa sulla privacy si applica all'applicazione Tourist Lens per dispositivi mobili.</p>
-<h2>Raccolta Dati e Funzionalità</h2>
-<p>L'Applicazione utilizza posizione, fotocamera e intelligenza artificiale per l'identificazione dei monumenti turistici.</p>
+<p>Questa informativa sulla privacy si applica all'applicazione Tourist Lens (di seguito &quot;Applicazione&quot;) per dispositivi mobili, creata da xaxo (di seguito &quot;Fornitore del Servizio&quot;) come servizio Freemium. Questo servizio è destinato a essere utilizzato &quot;COSÌ COM'È&quot;.</p>
+<h2>Raccolta e Utilizzo delle Informazioni</h2>
+<p>L'Applicazione raccoglie informazioni quando viene scaricata e utilizzata. Tali informazioni possono includere dati quali:</p>
+<ul>
+<li>L'indirizzo di Protocollo Internet del dispositivo (ad es. indirizzo IP)</li>
+<li>Le pagine dell'Applicazione visitate, l'ora e la data della visita, il tempo trascorso su tali pagine</li>
+<li>Il tempo complessivo trascorso sull'Applicazione</li>
+<li>Il sistema operativo utilizzato sul dispositivo mobile</li>
+</ul>
+<p>L'Applicazione raccoglie la posizione del dispositivo, il che aiuta il Fornitore del Servizio a determinare la posizione geografica approssimativa dell'utente e a utilizzarla nei seguenti modi:</p>
+<ul>
+<li><strong>Servizi di Geolocalizzazione</strong>: Il Fornitore del Servizio utilizza i dati di posizione (tramite Google Maps Platform) per offrire funzionalità quali contenuti personalizzati, raccomandazioni pertinenti e servizi di navigazione basati sulla posizione.</li>
+<li><strong>Sensor Fusion</strong>: Per determinare esattamente quale monumento l'utente sta osservando, l'Applicazione elabora i dati del magnetometro (bussola) e dell'accelerometro insieme alle coordinate GPS.</li>
+<li><strong>Analisi e Miglioramenti</strong>: La telemetria di sessione e delle prestazioni (ad es. punteggi di affidabilità dell'identificazione, tempo di elaborazione, utilizzo delle funzionalità) aiuta il Fornitore del Servizio ad analizzare il comportamento degli utenti, individuare tendenze e migliorare le prestazioni e la funzionalità complessive dell'Applicazione. Le coordinate GPS precise vengono memorizzate <strong>esclusivamente</strong> come parte di questa telemetria quando l'utente segnala espressamente un'identificazione come errata e invia una correzione — le scansioni di routine ed eseguite con successo non memorizzano la posizione esatta nei nostri sistemi di analisi. Questa telemetria viene eliminata automaticamente dopo 7 giorni (vedere <strong>Conservazione dei Dati</strong>).</li>
+<li><strong>Servizi di Terze Parti</strong>: Periodicamente, il Fornitore del Servizio può trasmettere dati di posizione anonimizzati a servizi esterni (come Google Analytics). Tali servizi assistono il Fornitore del Servizio nel miglioramento dell'Applicazione e nell'ottimizzazione della propria offerta.</li>
+</ul>
+<p>L'Applicazione utilizza la fotocamera del dispositivo per l'identificazione visiva di monumenti e luoghi di interesse.</p>
+<ul>
+<li><strong>Filtraggio Edge AI</strong>: Prima che qualsiasi immagine lasci il dispositivo, un modello locale sul dispositivo (<strong>Google ML Kit Image Labeling</strong>) la valuta. Le acquisizioni di scarsa qualità (sfocate o scure) e i contenuti palesemente non turistici (come gli screenshot) vengono filtrati localmente. Le immagini rilevanti dal punto di vista turistico vengono quindi trasmesse tramite canali crittografati ai nostri partner Vision AI in cloud, dove un ulteriore filtro <strong>Google SafeSearch</strong> verifica la presenza di contenuti sensibili prima dell'elaborazione. Le immagini vengono utilizzate esclusivamente per identificare monumenti e soggetti di interesse, non per identificare le persone.</li>
+<li><strong>Elaborazione in Cloud</strong>: Le immagini elaborate a fini di identificazione vengono trasmesse tramite canali crittografati ai nostri partner Vision AI. Qualora l'utente scelga di salvare o condividere contenuti specifici, tali immagini potranno essere archiviate sui server del Fornitore del Servizio (Firebase Storage) con rigorosi controlli di accesso.</li>
+</ul>
+<p>L'Applicazione utilizza tecnologie di Intelligenza Artificiale (IA), in particolare Google Gemini, per fornire contesto conversazionale, narrazioni storiche e raccomandazioni personalizzate. Le interazioni di chat e gli input dell'utente vengono elaborati dai servizi di IA generativa di Google. Utilizzando queste funzionalità, l'utente riconosce che i propri dati saranno trattati da modelli di IA di terze parti al fine di fornire il servizio. Tutto il trattamento IA viene svolto in conformità con la presente informativa sulla privacy e con le leggi applicabili.</p>
 <h2>Pubblicità e Annunci con Ricompensa (Google AdMob)</h2>
-<p>L'Applicazione integra <strong>Google AdMob</strong> per consentire agli utenti di visualizzare annunci video premiati (crediti Kokoro):</p>
+<p>L'Applicazione integra <strong>Google AdMob</strong> (Google Mobile Ads SDK) per mostrare annunci video con ricompensa facoltativi (ad es. per crediti audio Kokoro o scansioni aggiuntive):</p>
 <ul>
-<li><strong>Consenso GDPR / UMP</strong>: Gestione trasparente del consenso pubblicitario nello Spazio Economico Europeo.</li>
-<li><strong>Verifica Server-Side (SSV)</strong>: Accredito sicuro e verificato delle ricompense.</li>
+<li><strong>Identificatori e Consenso</strong>: In conformità alle preferenze dell'utente, Google AdMob può trattare identificatori di dispositivo e dati di interazione per mostrare annunci e prevenire frodi.</li>
+<li><strong>Consenso GDPR / UMP</strong>: Nello Spazio Economico Europeo raccogliamo il consenso tramite la Google User Messaging Platform (UMP). Le preferenze sono modificabili in qualsiasi momento nelle Impostazioni dell'app.</li>
+<li><strong>Verifica lato Server (SSV)</strong>: L'accredito dei premi viene convalidato crittograficamente sul server.</li>
 </ul>
-<h2>Terze Parti e Sicurezza</h2>
+<h2>Privacy by Design e Sicurezza Avanzata</h2>
+<p>Il Fornitore del Servizio implementa standard di sicurezza di alto livello per proteggere i dati dell'utente:</p>
 <ul>
-<li>Crittografia <strong>AES-256-GCM</strong> lato client.</li>
-<li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Informativa Google AdMob</a></li>
-<li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></li>
+<li><strong>Crittografia lato Client</strong>: Le informazioni personali sensibili, inclusi l'indirizzo e-mail, i messaggi di chat e i nomi dei luoghi scoperti, sono protette mediante crittografia <strong>AES-256-GCM</strong> lato client. Le chiavi crittografiche necessarie per leggere questi dati sono memorizzate esclusivamente nell'enclave sicura del dispositivo (Keychain/EncryptedSharedPreferences) e non sono mai accessibili al Fornitore del Servizio né a terze parti.</li>
+<li><strong>Sanitizzazione dei Dati PII</strong>: Tutti i registri di telemetria e di debug vengono automaticamente sanificati sul dispositivo prima della trasmissione. Eventuali informazioni personali identificabili (PII) vengono sostituite con identificatori generici per garantire l'anonimato dell'utente, consentendo al contempo di migliorare le prestazioni tecniche.</li>
+<li><strong>Certificate Pinning</strong>: Per prevenire attacchi &quot;Man-in-the-Middle&quot;, l'Applicazione utilizza il <strong>Certificate Pinning SSL/TLS</strong> per tutte le comunicazioni con i nostri backend IA. Ciò garantisce che i dati dell'utente raggiungano esclusivamente i nostri server verificati.</li>
+<li><strong>Device Anchor e Integrità della Sessione</strong>: Per prevenire un uso non autorizzato e garantire la coerenza della sessione, l'Applicazione utilizza un identificatore hardware con hash unidirezionale (<strong>Device Anchor</strong>) e la <strong>Schrödinger's Account Protection</strong> (controlli di integrità della sessione). Ciò protegge l'account dell'utente da possibili appropriazioni indebite durante una sessione attiva e garantisce che ricompense e scoperte vengano attribuite correttamente.</li>
+<li><strong>App Check</strong>: Integriamo <strong>Firebase App Check</strong> per verificare che tutte le richieste provengano da una versione non modificata dell'applicazione ufficiale Tourist Lens su un dispositivo attendibile.</li>
 </ul>
-<p>Data di efficacia: 2026-09-15 · Contatto: <strong>tourist.ai.guide@gmail.com</strong></p>
+<p>Per un'esperienza migliore, durante l'utilizzo dell'Applicazione il Fornitore del Servizio potrebbe richiedere di fornire alcune informazioni personali identificabili, come l'indirizzo e-mail e i dati di profilo, durante il processo di registrazione (tramite Firebase Auth). Se l'utente inizia come Ospite, la cronologia delle scansioni e le scoperte vengono memorizzate in forma anonima; al momento della registrazione, tali dati vengono migrati in modo sicuro al nuovo account tramite il collegamento degli account Firebase, garantendo la continuità.</p>
+<h2>Accesso di Terze Parti</h2>
+<p>Solo dati aggregati e anonimizzati vengono trasmessi periodicamente a servizi esterni per assistere il Fornitore del Servizio nel miglioramento dell'Applicazione e del proprio servizio. Il Fornitore del Servizio può condividere le informazioni dell'utente con terze parti nei modi descritti nella presente informativa sulla privacy.</p>
+<p>Si prega di notare che l'Applicazione utilizza servizi di terze parti che dispongono di una propria Informativa sulla Privacy in materia di trattamento dei dati. Di seguito sono riportati i collegamenti alle Informative sulla Privacy dei fornitori di servizi di terze parti utilizzati dall'Applicazione:</p>
+<ul>
+<li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
+<li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li>
+<li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics</a></li>
+<li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></li>
+<li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></li>
+<li><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google Gemini API</a></li>
+<li><a href="https://cloud.google.com/terms" target="_blank" rel="noopener">Google Cloud Vision AI</a></li>
+</ul>
+<p>Il Fornitore del Servizio può divulgare le Informazioni Fornite dall'Utente e le Informazioni Raccolte Automaticamente:</p>
+<ul>
+<li>come richiesto dalla legge, ad esempio per ottemperare a un mandato di comparizione o a un procedimento legale analogo;</li>
+<li>quando ritiene in buona fede che la divulgazione sia necessaria per tutelare i propri diritti, la sicurezza dell'utente o di terzi, per indagare su frodi o per rispondere a una richiesta governativa;</li>
+<li>con i propri fornitori di servizi di fiducia che operano per suo conto, non hanno un uso indipendente delle informazioni loro divulgate e hanno accettato di rispettare le regole stabilite nella presente informativa sulla privacy.</li>
+</ul>
+<h2>I Suoi Diritti e la Base Giuridica del Trattamento</h2>
+<p>A seconda della propria giurisdizione, l'utente potrebbe disporre di diritti previsti da normative sulla protezione dei dati quali il Regolamento Generale sulla Protezione dei Dati dell'UE/Regno Unito (GDPR) e il California Consumer Privacy Act (CCPA/CPRA). Tali diritti includono quello di:</p>
+<ul>
+<li><strong>Accedere</strong> a una copia dei propri dati personali;</li>
+<li><strong>Rettificare</strong> dati inesatti;</li>
+<li><strong>Cancellare</strong> i propri dati (vedere <strong>Politica di Conservazione dei Dati ed Eliminazione dell'Account</strong> di seguito);</li>
+<li><strong>Limitare</strong> od <strong>opporsi</strong> a determinati trattamenti;</li>
+<li><strong>Trasferire</strong> (portabilità) i propri dati verso un altro servizio in un formato strutturato e leggibile da dispositivo automatico;</li>
+<li><strong>Escludersi (opt-out)</strong> dalla vendita o condivisione delle informazioni personali (residenti della California) — il Fornitore del Servizio non vende informazioni personali dietro corrispettivo economico; la condivisione di dati pubblicitari con Google AdMob è descritta sopra e può essere limitata tramite le impostazioni di consenso in-app;</li>
+<li><strong>Non discriminazione</strong> per l'esercizio di uno qualsiasi di questi diritti.</li>
+</ul>
+<p>Per esercitare uno qualsiasi di questi diritti, contattare il Fornitore del Servizio all'indirizzo <strong>tourist.ai.guide@gmail.com</strong>. Ove applicabile il GDPR, trattiamo i dati personali sulla base delle seguenti basi giuridiche: <strong>esecuzione di un contratto</strong> (account, abbonamenti e crediti dell'utente), <strong>legittimo interesse</strong> (prevenzione delle frodi, sicurezza dell'app e miglioramento del servizio), <strong>consenso</strong> (personalizzazione pubblicitaria e telemetria di sessione, revocabile in qualsiasi momento dalle Impostazioni) e <strong>obbligo legale</strong> (per rispondere a richieste legittime).</p>
+<p><strong>Trasferimenti Internazionali di Dati</strong>: L'infrastruttura del Fornitore del Servizio (Google Firebase, Google Cloud) può trattare e archiviare i dati dell'utente negli Stati Uniti e in altri paesi diversi dal proprio. Ove richiesto, tali trasferimenti si basano su garanzie adeguate riconosciute dalla normativa applicabile, come le Clausole Contrattuali Standard della Commissione Europea o una decisione di adeguatezza.</p>
+<p><strong>Contatto per UE/Regno Unito/Svizzera</strong>: Trattandosi di un piccolo team di sviluppo privo di un Responsabile della Protezione dei Dati (DPO) dedicato, il Fornitore del Servizio (<strong>tourist.ai.guide@gmail.com</strong>) funge da punto di contatto per tutte le richieste relative alla privacy, incluse quelle degli utenti nello SEE, nel Regno Unito e in Svizzera.</p>
+<h2>Diritti di Opt-Out</h2>
+<p>È possibile interrompere completamente la raccolta di informazioni da parte dell'Applicazione semplicemente disinstallandola. Inoltre, l'utente ha il diritto di rinunciare (opt-out) alla condivisione dei dati di telemetria di sessione (registri relativi all'utilizzo delle funzionalità, alle prestazioni e — solo quando si invia una correzione a un'identificazione di un monumento — alla posizione precisa di quella specifica scansione). La condivisione della telemetria è <strong>abilitata per impostazione predefinita</strong>; questa scelta viene presentata per la prima volta durante la configurazione iniziale come Ospite e può essere modificata in qualsiasi momento dalle impostazioni dell'Applicazione. È inoltre possibile gestire le preferenze pubblicitarie tramite le impostazioni di privacy e consenso in-app.</p>
+<h2>Politica di Conservazione dei Dati ed Eliminazione dell'Account</h2>
+<p>Il Fornitore del Servizio conserverà i dati forniti dall'utente (come il profilo, i timbri e i piani salvati) per tutto il tempo in cui l'utente utilizza l'Applicazione e per un periodo ragionevole successivo.</p>
+<p><strong>Telemetria di Sessione e Scansione:</strong> I registri tecnici di telemetria e diagnostica per singola scansione (utilizzati per rilevare e correggere errori di identificazione dei monumenti) vengono eliminati automaticamente e permanentemente <strong>7 giorni</strong> dopo la loro creazione, indipendentemente dall'eventuale eliminazione dell'account.</p>
+<h2>Come richiedere l'eliminazione dell'account:</h2>
+<p>L'utente ha il diritto di eliminare il proprio account e tutti i dati associati in qualsiasi momento. È possibile farlo in due modi:</p>
+<ol>
+<li><strong>All'interno dell'App:</strong> Accedere a Impostazioni &gt; Profilo &gt; Elimina Account. Questa operazione attiverà immediatamente l'eliminazione permanente del profilo, dei timbri e dei dati crittografati dell'utente. La Telemetria di Sessione e Scansione non viene eliminata in questa fase; scade automaticamente secondo il calendario di 7 giorni sopra descritto, indipendentemente dall'account.</li>
+<li><strong>Via E-mail:</strong> Se non è più possibile accedere all'Applicazione, o si desidera richiedere l'eliminazione esternamente, contattare <strong>tourist.ai.guide@gmail.com</strong>. La richiesta verrà elaborata entro un termine ragionevole (in genere meno di 7 giorni).</li>
+</ol>
+<p>A seguito dell'eliminazione, tutte le informazioni personali identificabili e i piani di viaggio crittografati vengono immediatamente e permanentemente rimossi dai nostri server di produzione. La Telemetria di Sessione e Scansione segue il calendario di scadenza automatica di 7 giorni sopra descritto, indipendentemente dallo stato dell'account.</p>
+<p><strong>Richiesta di una Copia dei Suoi Dati:</strong> Per richiedere una copia dei dati di telemetria o diagnostici associati al proprio account, contattare <strong>tourist.ai.guide@gmail.com</strong>. Risponderemo entro un termine ragionevole (in genere meno di 7 giorni).</p>
+<h2>Minori</h2>
+<p>Il Fornitore del Servizio non utilizza l'Applicazione per sollecitare consapevolmente dati da, o per commercializzare prodotti presso, minori di 13 anni.</p>
+<p>L'Applicazione non si rivolge a persone di età inferiore a 13 anni. Il Fornitore del Servizio non raccoglie consapevolmente informazioni personali identificabili da minori di 13 anni. Qualora il Fornitore del Servizio scopra che un minore di 13 anni ha fornito informazioni personali, provvederà a eliminarle immediatamente dai propri server. Se l'utente è un genitore o un tutore ed è a conoscenza del fatto che il proprio figlio ha fornito informazioni personali, è pregato di contattare il Fornitore del Servizio (tourist.ai.guide@gmail.com) affinché possa intraprendere le azioni necessarie.</p>
+<h2>Sicurezza</h2>
+<p>Il Fornitore del Servizio è impegnato nella salvaguardia della riservatezza delle informazioni dell'utente. Il Fornitore del Servizio adotta misure di sicurezza fisiche, elettroniche e procedurali per proteggere le informazioni che tratta e conserva.</p>
+<h2>Modifiche</h2>
+<p>La presente Informativa sulla Privacy può essere aggiornata periodicamente per qualsiasi motivo. Il Fornitore del Servizio notificherà eventuali modifiche all'Informativa sulla Privacy aggiornando questa pagina con la nuova versione. Si consiglia di consultare regolarmente la presente Informativa sulla Privacy per eventuali modifiche, poiché l'uso continuato dell'Applicazione è considerato accettazione di tutte le modifiche.</p>
+<p>La presente informativa sulla privacy è efficace a partire dal 2026-09-15</p>
+<h2>Il Suo Consenso</h2>
+<p>Utilizzando l'Applicazione, l'utente acconsente al trattamento delle proprie informazioni come stabilito nella presente Informativa sulla Privacy, ora e come modificata da noi.</p>
+<h2>Contattaci</h2>
+<p>Per qualsiasi domanda relativa alla privacy durante l'utilizzo dell'Applicazione, o per domande sulle nostre pratiche, si prega di contattare il Fornitore del Servizio via e-mail all'indirizzo tourist.ai.guide@gmail.com.</p>
 <hr>
 </article>
 </main>

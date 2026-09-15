@@ -14,23 +14,102 @@
 <article class="legal glass">
 <nav class="lang-switch"><a href="en.html">English</a> · <a href="es.html">Español</a> · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a> · <strong>Deutsch</strong> · <a href="pt.html">Português</a> · <a href="zh.html">中文</a> · <a href="ja.html">日本語</a></nav>
 <h2>Datenschutzerklärung</h2>
-<p>Diese Datenschutzerklärung gilt für die Tourist Lens-App von xaxo als Freemium-Dienst.</p>
+<p>Diese Datenschutzerklärung gilt für die Tourist Lens-App (im Folgenden &quot;Anwendung&quot;) für mobile Endgeräte, die von xaxo (im Folgenden &quot;Dienstanbieter&quot;) als Freemium-Dienst erstellt wurde. Dieser Dienst ist für die Nutzung &quot;WIE BESEHEN&quot; bestimmt.</p>
 <h2>Informationserfassung und -nutzung</h2>
-<p>Die Anwendung erfasst Gerätedaten, IP-Adressen sowie anonymisierte Standort- und Kameradaten zur Monumenterkennung.</p>
+<p>Die Anwendung erfasst Informationen, wenn Sie sie herunterladen und nutzen. Diese Informationen können unter anderem Folgendes umfassen:</p>
+<ul>
+<li>Die Internetprotokoll-Adresse Ihres Geräts (z. B. IP-Adresse)</li>
+<li>Die Seiten der Anwendung, die Sie besuchen, Uhrzeit und Datum Ihres Besuchs sowie die auf diesen Seiten verbrachte Zeit</li>
+<li>Die insgesamt in der Anwendung verbrachte Zeit</li>
+<li>Das Betriebssystem, das Sie auf Ihrem mobilen Gerät verwenden</li>
+</ul>
+<p>Die Anwendung erfasst den Standort Ihres Geräts, was dem Dienstanbieter hilft, Ihren ungefähren geografischen Standort zu bestimmen und diesen auf folgende Weise zu nutzen:</p>
+<ul>
+<li><strong>Geolokalisierungsdienste</strong>: Der Dienstanbieter nutzt Standortdaten (über die Google Maps Platform), um Funktionen wie personalisierte Inhalte, relevante Empfehlungen und standortbasierte Navigationsdienste bereitzustellen.</li>
+<li><strong>Sensorfusion</strong>: Um genau zu bestimmen, welches Wahrzeichen Sie betrachten, verarbeitet die Anwendung Magnetometer- (Kompass-) und Beschleunigungssensordaten in Verbindung mit GPS-Koordinaten.</li>
+<li><strong>Analyse und Verbesserungen</strong>: Sitzungs- und Leistungstelemetrie (z. B. Konfidenzwerte der Identifizierung, Verarbeitungszeit, Funktionsnutzung) hilft dem Dienstanbieter, das Nutzerverhalten zu analysieren, Trends zu erkennen und die Gesamtleistung und Funktionalität der Anwendung zu verbessern. Präzise GPS-Koordinaten werden <strong>nur</strong> dann als Teil dieser Telemetrie gespeichert, wenn Sie eine Wahrzeichen-Identifizierung ausdrücklich als falsch markieren und eine Korrektur einreichen — routinemäßige, erfolgreiche Scans speichern keinen genauen Standort in unseren Analysesystemen. Diese Telemetrie wird nach 7 Tagen automatisch gelöscht (siehe <strong>Datenaufbewahrung</strong>).</li>
+<li><strong>Dienste Dritter</strong>: Der Dienstanbieter kann anonymisierte Standortdaten regelmäßig an externe Dienste (wie Google Analytics) übermitteln. Diese Dienste unterstützen ihn dabei, die Anwendung zu verbessern und sein Angebot zu optimieren.</li>
+</ul>
+<p>Die Anwendung nutzt die Kamera Ihres Geräts zur visuellen Identifizierung von Denkmälern und Sehenswürdigkeiten.</p>
+<ul>
+<li><strong>Edge-AI-Filterung</strong>: Bevor ein Bild Ihr Gerät verlässt, wird es von einem lokalen, geräteinternen Modell (<strong>Google ML Kit Image Labeling</strong>) bewertet. Aufnahmen von geringer Qualität (unscharf oder dunkel) sowie offensichtlich nicht touristische Inhalte (z. B. Screenshots) werden lokal herausgefiltert. Touristisch relevante Bilder werden anschließend über verschlüsselte Kanäle an unsere Vision-AI-Partner in der Cloud übertragen, wo ein zusätzlicher <strong>Google-SafeSearch</strong>-Filter vor der Verarbeitung auf sensible Inhalte prüft. Bilder werden ausschließlich zur Identifizierung von Wahrzeichen und Objekten von Interesse verwendet, nicht zur Identifizierung von Personen.</li>
+<li><strong>Cloud-Verarbeitung</strong>: Zur Identifizierung verarbeitete Bilder werden über verschlüsselte Kanäle an unsere Vision-AI-Partner übertragen. Wenn Sie sich entscheiden, bestimmte Inhalte zu speichern oder zu teilen, können diese Bilder auf den Servern des Dienstanbieters (Firebase Storage) mit strengen Zugriffskontrollen gespeichert werden.</li>
+</ul>
+<p>Die Anwendung nutzt Technologien der Künstlichen Intelligenz (KI), insbesondere Google Gemini, um konversationellen Kontext, historische Erzählungen und personalisierte Empfehlungen bereitzustellen. Ihre Chat-Interaktionen und Eingaben werden von den generativen KI-Diensten von Google verarbeitet. Durch die Nutzung dieser Funktionen erkennen Sie an, dass Ihre Daten von KI-Modellen Dritter verarbeitet werden, um den Dienst bereitzustellen. Die gesamte KI-Verarbeitung erfolgt im Einklang mit dieser Datenschutzerklärung und den geltenden Gesetzen.</p>
 <h2>Werbung und Belohnungsanzeigen (Google AdMob)</h2>
-<p>Die Anwendung integriert <strong>Google AdMob</strong> zur Anzeige freiwilliger Belohnungsvideos (z. B. für Kokoro-Audioguides):</p>
+<p>Die Anwendung integriert <strong>Google AdMob</strong> (Google Mobile Ads SDK) zur Bereitstellung optionaler Video-Belohnungsanzeigen. Wenn Sie sich entscheiden, eine Belohnungsanzeige anzusehen, um Audio-Erzählungen (z. B. Kokoro-Guthaben) zu verdienen oder zusätzliche Identifizierungen freizuschalten:</p>
 <ul>
-<li><strong>DSGVO / UMP-Einwilligung</strong>: Im EWR erfassen wir Ihre Einwilligung über die Google User Messaging Platform. Einstellungen können jederzeit in der App geändert werden.</li>
-<li><strong>Server-Side Verification (SSV)</strong>: Belohnungen werden serverseitig kryptografisch bestätigt.</li>
+<li><strong>Kennungen und Einwilligung</strong>: Je nach Ihrer Region und Ihren Einwilligungspräferenzen können Google AdMob und seine Werbepartner Gerätekennungen (wie IDFA unter iOS oder die Google Advertising-ID unter Android), IP-Adresse, ungefähren Standort und Anzeigeninteraktionsdaten verarbeiten, um personalisierte oder nicht personalisierte Anzeigen bereitzustellen und Betrug zu verhindern.</li>
+<li><strong>DSGVO-/UMP-Einwilligung</strong>: In Regionen, in denen eine Einwilligung gesetzlich vorgeschrieben ist (einschließlich des Europäischen Wirtschaftsraums, des Vereinigten Königreichs und der Schweiz), verwenden wir das Google User Messaging Platform (UMP) SDK, um Ihre Einwilligung zu erfassen und zu verwalten. Sie können Ihre Werbe-Einwilligungsentscheidungen jederzeit über das In-App-Einstellungsmenü überprüfen oder ändern.</li>
+<li><strong>Serverseitige Verifizierung (SSV)</strong>: Wenn Sie eine Belohnungsanzeige abschließen, wird serverseitig ein kryptografisches Verifizierungstoken verarbeitet, um die Belohnung zu validieren und Ihrem Guthaben gutzuschreiben, ohne sensible Kontodaten gegenüber Werbetreibenden offenzulegen.</li>
 </ul>
-<h2>Sicherheit und Drittanbieter</h2>
+<h2>Privacy by Design &amp; Erweiterte Sicherheit</h2>
+<p>Der Dienstanbieter implementiert Sicherheitsstandards auf hohem Niveau zum Schutz Ihrer Daten:</p>
 <ul>
-<li><strong>AES-256-GCM</strong> clientseitige Verschlüsselung.</li>
-<li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob Datenschutzerklärung</a></li>
-<li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Privacy</a></li>
-<li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy</a></li>
+<li><strong>Clientseitige Verschlüsselung</strong>: Sensible personenbezogene Daten, einschließlich Ihrer E-Mail-Adresse, Chat-Nachrichten und der Namen entdeckter Orte, werden mittels clientseitiger <strong>AES-256-GCM</strong>-Verschlüsselung geschützt. Die zum Lesen dieser Daten erforderlichen kryptografischen Schlüssel werden ausschließlich in der sicheren Enklave Ihres Geräts (Keychain/EncryptedSharedPreferences) gespeichert und sind weder für den Dienstanbieter noch für Dritte zugänglich.</li>
+<li><strong>PII-Bereinigung</strong>: Alle Telemetrie- und Debug-Protokolle werden vor der Übertragung automatisch auf Ihrem Gerät bereinigt. Potenziell personenbezogene Daten (PII) werden durch generische Kennungen ersetzt, um Ihre Anonymität zu gewährleisten, während wir gleichzeitig die technische Leistung verbessern können.</li>
+<li><strong>Certificate Pinning</strong>: Um &quot;Man-in-the-Middle&quot;-Angriffe zu verhindern, verwendet die Anwendung <strong>SSL/TLS-Certificate-Pinning</strong> für sämtliche Kommunikation mit unseren KI-Backends. Dies stellt sicher, dass Ihre Daten ausschließlich unsere verifizierten Server erreichen.</li>
+<li><strong>Geräteanker &amp; Sitzungsintegrität</strong>: Um unbefugte Nutzung zu verhindern und die Konsistenz der Sitzung sicherzustellen, verwendet die Anwendung eine einweg-gehashte Hardware-Kennung (<strong>Device Anchor</strong>) sowie den <strong>Schrödinger&#x27;s-Account-Schutz</strong> (Sitzungsintegritätsprüfungen). Dies schützt Ihr Konto davor, während einer aktiven Sitzung gekapert zu werden, und stellt sicher, dass Belohnungen und Entdeckungen korrekt zugeordnet werden.</li>
+<li><strong>App Check</strong>: Wir integrieren <strong>Firebase App Check</strong>, um zu überprüfen, dass alle Anfragen von einer unveränderten Version der offiziellen Tourist-Lens-Anwendung auf einem vertrauenswürdigen Gerät stammen.</li>
 </ul>
-<p>Gültig ab: 15.09.2026 · Kontakt: <strong>tourist.ai.guide@gmail.com</strong></p>
+<p>Für ein besseres Erlebnis kann der Dienstanbieter während der Nutzung der Anwendung von Ihnen verlangen, uns bestimmte personenbezogene Daten zur Verfügung zu stellen, wie z. B. Ihre E-Mail-Adresse und Profilinformationen während des Registrierungsprozesses (über Firebase Auth). Wenn Sie als Gast beginnen, werden Ihr Scan-Verlauf und Ihre Entdeckungen anonym gespeichert; bei der Registrierung werden diese Daten über die Firebase-Kontoverknüpfung sicher auf Ihr neues Konto übertragen, um die Kontinuität zu gewährleisten.</p>
+<h2>Zugriff durch Dritte</h2>
+<p>Nur aggregierte, anonymisierte Daten werden regelmäßig an externe Dienste übermittelt, um den Dienstanbieter bei der Verbesserung der Anwendung und seines Dienstes zu unterstützen. Der Dienstanbieter kann Ihre Informationen mit Dritten auf die in dieser Datenschutzerklärung beschriebenen Weisen teilen.</p>
+<p>Bitte beachten Sie, dass die Anwendung Dienste Dritter nutzt, die über eigene Datenschutzerklärungen zur Datenverarbeitung verfügen. Nachfolgend finden Sie die Links zu den Datenschutzerklärungen der von der Anwendung genutzten Drittanbieter:</p>
+<ul>
+<li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
+<li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a></li>
+<li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics</a></li>
+<li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></li>
+<li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></li>
+<li><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google Gemini API</a></li>
+<li><a href="https://cloud.google.com/terms" target="_blank" rel="noopener">Google Cloud Vision AI</a></li>
+</ul>
+<p>Der Dienstanbieter kann vom Nutzer bereitgestellte und automatisch erfasste Informationen offenlegen:</p>
+<ul>
+<li>soweit gesetzlich vorgeschrieben, etwa zur Erfüllung einer Vorladung oder eines ähnlichen rechtlichen Verfahrens;</li>
+<li>wenn er in gutem Glauben davon ausgeht, dass die Offenlegung notwendig ist, um seine Rechte zu schützen, Ihre Sicherheit oder die Sicherheit anderer zu gewährleisten, Betrug zu untersuchen oder auf eine behördliche Anfrage zu reagieren;</li>
+<li>gegenüber seinen vertrauenswürdigen Dienstleistern, die in seinem Auftrag tätig sind, keine eigenständige Nutzung der ihnen offengelegten Informationen vornehmen und sich verpflichtet haben, die in dieser Datenschutzerklärung festgelegten Regeln einzuhalten.</li>
+</ul>
+<h2>Ihre Rechte &amp; Rechtsgrundlage der Verarbeitung</h2>
+<p>Je nach Ihrer Rechtsordnung können Ihnen Rechte nach Datenschutzgesetzen wie der EU-/UK-Datenschutz-Grundverordnung (DSGVO) und dem California Consumer Privacy Act (CCPA/CPRA) zustehen. Dazu gehört das Recht auf:</p>
+<ul>
+<li><strong>Auskunft</strong> über eine Kopie Ihrer personenbezogenen Daten;</li>
+<li><strong>Berichtigung</strong> unrichtiger Daten;</li>
+<li><strong>Löschung</strong> Ihrer Daten (siehe <strong>Datenaufbewahrungs- und Kontolöschungsrichtlinie</strong> unten);</li>
+<li><strong>Einschränkung</strong> der Verarbeitung oder <strong>Widerspruch</strong> gegen bestimmte Verarbeitungen;</li>
+<li><strong>Übertragbarkeit</strong> Ihrer Daten an einen anderen Dienst in einem strukturierten, maschinenlesbaren Format;</li>
+<li><strong>Widerspruch gegen den Verkauf</strong> oder die Weitergabe personenbezogener Informationen (Einwohner Kaliforniens) — der Dienstanbieter verkauft keine personenbezogenen Daten gegen finanzielle Gegenleistung; die werbebezogene Datenweitergabe an Google AdMob ist oben beschrieben und kann über die In-App-Einwilligungseinstellungen eingeschränkt werden;</li>
+<li><strong>Nichtdiskriminierung</strong> bei der Ausübung dieser Rechte.</li>
+</ul>
+<p>Um eines dieser Rechte auszuüben, wenden Sie sich an den Dienstanbieter unter <strong>tourist.ai.guide@gmail.com</strong>. Soweit die DSGVO Anwendung findet, verarbeiten wir personenbezogene Daten auf folgenden Rechtsgrundlagen: <strong>Vertragserfüllung</strong> (Ihr Konto, Abonnements und Guthaben), <strong>berechtigte Interessen</strong> (Betrugsprävention, App-Sicherheit und Serviceverbesserung), <strong>Einwilligung</strong> (Werbepersonalisierung und Sitzungstelemetrie, die Sie jederzeit in den Einstellungen widerrufen können) sowie <strong>rechtliche Verpflichtung</strong> (Erfüllung rechtmäßiger Anfragen).</p>
+<p><strong>Internationale Datenübermittlungen</strong>: Die Infrastruktur des Dienstanbieters (Google Firebase, Google Cloud) kann Ihre Daten in den Vereinigten Staaten und anderen Ländern außerhalb Ihres eigenen Landes verarbeiten und speichern. Soweit erforderlich, stützen sich solche Übermittlungen auf geeignete, nach geltendem Recht anerkannte Garantien, wie die Standardvertragsklauseln der Europäischen Kommission oder einen Angemessenheitsbeschluss.</p>
+<p><strong>Kontakt für EU/UK/Schweiz</strong>: Als kleines Entwicklungsteam ohne separaten Datenschutzbeauftragten fungiert der Dienstanbieter (<strong>tourist.ai.guide@gmail.com</strong>) als Ansprechpartner für alle datenschutzbezogenen Anfragen, einschließlich jener von Nutzern im EWR, im Vereinigten Königreich und in der Schweiz.</p>
+<h2>Opt-Out-Rechte</h2>
+<p>Sie können jegliche Erfassung von Informationen durch die Anwendung ganz einfach durch Deinstallation stoppen. Darüber hinaus haben Sie das Recht, der Weitergabe von Sitzungstelemetriedaten zu widersprechen (Protokolle zur Funktionsnutzung, Leistung und — nur wenn Sie eine Korrektur zu einer Wahrzeichen-Identifizierung einreichen — dem genauen Standort dieses spezifischen Scans). Die Telemetrieweitergabe ist <strong>standardmäßig aktiviert</strong>; diese Wahlmöglichkeit wird erstmals während der anfänglichen Gast-Einrichtung angezeigt und kann jederzeit in den Einstellungen der Anwendung angepasst werden. Sie können Ihre Werbepräferenzen auch über die In-App-Datenschutz- und Einwilligungseinstellungen verwalten.</p>
+<h2>Datenaufbewahrungs- und Kontolöschungsrichtlinie</h2>
+<p>Der Dienstanbieter speichert vom Nutzer bereitgestellte Daten (wie Ihr Profil, Ihre Stempel und gespeicherte Pläne) so lange, wie Sie die Anwendung nutzen, und danach für einen angemessenen Zeitraum.</p>
+<p><strong>Sitzungs- und Scan-Telemetrie:</strong> Technische Telemetrie- und Scan-Diagnosedaten (die zur Erkennung und Behebung von Fehlern bei der Wahrzeichen-Identifizierung verwendet werden) werden <strong>7 Tage</strong> nach ihrer Erstellung automatisch und dauerhaft gelöscht, unabhängig davon, ob Sie Ihr Konto löschen.</p>
+<h2>So beantragen Sie die Löschung Ihres Kontos:</h2>
+<p>Sie haben jederzeit das Recht, Ihr Konto und alle zugehörigen Daten zu löschen. Dies können Sie auf zwei Wegen tun:</p>
+<ol>
+<li><strong>In der App:</strong> Gehen Sie zu Einstellungen &gt; Profil &gt; Konto löschen. Dies löst unmittelbar die dauerhafte Löschung Ihres Profils, Ihrer Stempel und verschlüsselten Daten aus. Sitzungs- und Scan-Telemetrie wird bei diesem Schritt nicht gelöscht; sie läuft unabhängig von Ihrem Konto automatisch nach dem oben beschriebenen 7-Tage-Zeitplan ab.</li>
+<li><strong>Per E-Mail:</strong> Wenn Sie nicht mehr auf die Anwendung zugreifen können oder die Löschung extern beantragen möchten, kontaktieren Sie uns bitte unter <strong>tourist.ai.guide@gmail.com</strong>. Ihre Anfrage wird innerhalb einer angemessenen Frist bearbeitet (in der Regel weniger als 7 Tage).</li>
+</ol>
+<p>Nach der Löschung werden alle personenbezogenen Daten und verschlüsselten Reisepläne unverzüglich und dauerhaft von unseren Produktionsservern entfernt. Sitzungs- und Scan-Telemetrie unterliegt unabhängig vom Kontostatus dem oben beschriebenen automatischen 7-Tage-Ablauf.</p>
+<p><strong>Anfrage einer Kopie Ihrer Daten:</strong> Um eine Kopie der mit Ihrem Konto verbundenen Telemetrie- oder Diagnosedaten anzufordern, kontaktieren Sie uns unter <strong>tourist.ai.guide@gmail.com</strong>. Wir werden innerhalb einer angemessenen Frist antworten (in der Regel weniger als 7 Tage).</p>
+<h2>Kinder</h2>
+<p>Der Dienstanbieter nutzt die Anwendung nicht, um wissentlich Daten von Kindern unter 13 Jahren zu erheben oder Marketing an sie zu richten.</p>
+<p>Die Anwendung richtet sich nicht an Personen unter 13 Jahren. Der Dienstanbieter erhebt nicht wissentlich personenbezogene Daten von Kindern unter 13 Jahren. Sollte der Dienstanbieter feststellen, dass ein Kind unter 13 Jahren personenbezogene Daten bereitgestellt hat, wird der Dienstanbieter diese unverzüglich von seinen Servern löschen. Wenn Sie Elternteil oder Erziehungsberechtigter sind und wissen, dass Ihr Kind uns personenbezogene Daten übermittelt hat, wenden Sie sich bitte an den Dienstanbieter (tourist.ai.guide@gmail.com), damit die notwendigen Maßnahmen ergriffen werden können.</p>
+<h2>Sicherheit</h2>
+<p>Dem Dienstanbieter liegt der Schutz der Vertraulichkeit Ihrer Informationen am Herzen. Der Dienstanbieter stellt physische, elektronische und verfahrenstechnische Schutzmaßnahmen bereit, um die von ihm verarbeiteten und gespeicherten Informationen zu schützen.</p>
+<h2>Änderungen</h2>
+<p>Diese Datenschutzerklärung kann von Zeit zu Zeit aus beliebigem Grund aktualisiert werden. Der Dienstanbieter wird Sie über etwaige Änderungen der Datenschutzerklärung informieren, indem er diese Seite mit der neuen Datenschutzerklärung aktualisiert. Es wird empfohlen, diese Datenschutzerklärung regelmäßig auf Änderungen zu überprüfen, da die fortgesetzte Nutzung als Zustimmung zu allen Änderungen gilt.</p>
+<p>Diese Datenschutzerklärung ist gültig ab dem 15.09.2026.</p>
+<h2>Ihre Einwilligung</h2>
+<p>Durch die Nutzung der Anwendung willigen Sie in die Verarbeitung Ihrer Informationen ein, wie in dieser Datenschutzerklärung dargelegt, sowohl jetzt als auch in der von uns geänderten Fassung.</p>
+<h2>Kontakt</h2>
+<p>Wenn Sie Fragen zum Datenschutz bei der Nutzung der Anwendung haben oder Fragen zu unseren Praktiken haben, kontaktieren Sie bitte den Dienstanbieter per E-Mail unter tourist.ai.guide@gmail.com.</p>
 <hr>
 </article>
 </main>
