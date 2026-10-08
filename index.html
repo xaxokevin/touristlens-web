@@ -27,7 +27,7 @@
   <meta property="og:url" content="https://touristlens.app/">
   <meta property="og:title" content="Tourist Lens — Point your camera. Discover the story.">
   <meta property="og:description"
-    content="An AI travel companion grounded in Apple design principles. Instant landmark identification, multi-day itineraries, and digital passport.">
+    content="An intelligent AI travel companion. Instant landmark identification, multi-day itineraries, and digital passport.">
   <meta property="og:image" content="https://touristlens.app/assets/img/feature-graphic-en.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="500">
@@ -102,7 +102,7 @@
       <div class="container">
         <div class="eyebrow-pill">
           <span class="pulsing-dot"></span>
-          <span>Apple HIG Crafted · AI Travel Companion</span>
+          <span>Multimodal AI · Real-Time Travel Companion</span>
         </div>
 
         <h1 class="hero-title">
@@ -118,12 +118,12 @@
         <div class="store-buttons-wrap" id="download">
           <a class="badge-link" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank"
             rel="noopener">
-            <img src="assets/img/badges/app-store-badge-en.svg" alt="Download on the App Store" height="44">
+            <img src="assets/img/badges/app-store-badge-en.svg" alt="Download on the App Store" width="132" height="44">
           </a>
 
           <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide"
             target="_blank" rel="noopener">
-            <img src="assets/img/badges/google-play-badge-en.svg" alt="Get it on Google Play" height="44">
+            <img src="assets/img/badges/google-play-badge-en.svg" alt="Get it on Google Play" width="148" height="44">
           </a>
 
           <a class="btn-film" id="openFilmBtn" href="https://youtube.com/shorts/yztP5BvL5oc?feature=share" target="_blank" rel="noopener" aria-label="Watch the film on YouTube">
@@ -282,13 +282,11 @@
                     <span class="voice-bar"></span>
                     <span class="voice-bar"></span>
                     <span class="voice-bar"></span>
-                    <span class="voice-bar"></span>
-                    <span class="voice-bar"></span>
                   </div>
                 </div>
 
-                <p class="voice-sample-quote">
-                  &laquo;The head shrine of the kami Inari, ancient deity of agriculture, fertility, and business prosperity.&raquo;
+                <p class="voice-sample-quote" id="voiceSampleQuote">
+                  &laquo;The head shrine of the kami Inari, deity of agriculture and prosperity.&raquo;
                 </p>
 
                 <div class="voice-meta-bar">
@@ -297,39 +295,39 @@
                 </div>
               </div>
 
-              <div class="languages-pill-cloud">
-                <div class="lang-code-pill">
+              <div class="languages-pill-cloud" role="tablist" aria-label="Available narration languages">
+                <button type="button" class="lang-code-pill active" data-lang="EN" data-quote="&laquo;The head shrine of the kami Inari, deity of agriculture and prosperity.&raquo;">
                   <span class="lang-code-badge">EN</span>
                   <span class="lang-name-label">English</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="ES" data-quote="&laquo;El santuario principal del kami Inari, deidad de la agricultura y prosperidad.&raquo;">
                   <span class="lang-code-badge">ES</span>
                   <span class="lang-name-label">Español</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="FR" data-quote="&laquo;Le sanctuaire principal dédié au kami Inari, divinité de l'agriculture et de la prospérité.&raquo;">
                   <span class="lang-code-badge">FR</span>
                   <span class="lang-name-label">Français</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="IT" data-quote="&laquo;Il santuario principale del kami Inari, antica divinità dell'agricoltura e prosperità.&raquo;">
                   <span class="lang-code-badge">IT</span>
                   <span class="lang-name-label">Italiano</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="DE" data-quote="&laquo;Der Hauptschrein des Kami Inari, Gottheit der Landwirtschaft und des Wohlstands.&raquo;">
                   <span class="lang-code-badge">DE</span>
                   <span class="lang-name-label">Deutsch</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="PT" data-quote="&laquo;O santuário principal do kami Inari, divindade da agricultura e prosperidade.&raquo;">
                   <span class="lang-code-badge">PT</span>
                   <span class="lang-name-label">Português</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="ZH" data-quote="&laquo;伏见稻荷大社：供奉稻荷神的神社总本社，象征丰收与繁荣。&raquo;">
                   <span class="lang-code-badge">ZH</span>
                   <span class="lang-name-label">中文</span>
-                </div>
-                <div class="lang-code-pill">
+                </button>
+                <button type="button" class="lang-code-pill" data-lang="JA" data-quote="&laquo;全国の稲荷神社の総本宮。五穀豊穣と商売繁昌の神を祀る。&raquo;">
                   <span class="lang-code-badge">JA</span>
                   <span class="lang-name-label">日本語</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -623,7 +621,7 @@
       </div>
     </section>
 
-    <!-- Privacy Section (Apple HIG Responsibility Principle) -->
+    <!-- Privacy Section (Zero-Knowledge Architecture) -->
     <section id="privacy" class="section-padding">
       <div class="container">
         <div class="privacy-band">
@@ -637,7 +635,7 @@
             <span class="section-kicker">Security Architecture</span>
             <h2 class="section-heading" style="font-size: 2.4rem;">Privacy, by design.</h2>
             <p class="section-subtext" style="font-size: 1.05rem;">
-              Tourist Lens was architected on Apple's core belief: what happens on your device stays on your device. We
+              Tourist Lens was architected on a fundamental belief: what happens on your device stays on your device. We
               never sell your location, track your browsing, or train models on your private photos.
             </p>
           </div>
@@ -692,12 +690,12 @@
           <div class="store-buttons-wrap">
             <a class="badge-link" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank"
               rel="noopener">
-              <img src="assets/img/badges/app-store-badge-en.svg" alt="Download on the App Store" height="44">
+              <img src="assets/img/badges/app-store-badge-en.svg" alt="Download on the App Store" width="132" height="44">
             </a>
 
             <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide"
               target="_blank" rel="noopener">
-              <img src="assets/img/badges/google-play-badge-en.svg" alt="Get it on Google Play" height="44">
+              <img src="assets/img/badges/google-play-badge-en.svg" alt="Get it on Google Play" width="148" height="44">
             </a>
           </div>
         </div>
@@ -715,6 +713,8 @@
         </a>
 
         <div class="footer-links">
+          <a href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener">Google Play</a>
           <a href="legal/privacy/en.html">Privacy Policy</a>
           <a href="legal/terms/en.html">Terms of Service</a>
           <a href="mailto:tourist.ai.guide@gmail.com">Support &amp; Contact</a>
@@ -722,14 +722,14 @@
       </div>
 
       <p class="footer-legal-copy">
-        &copy; 2026 Tourist Lens. Built with Apple Human Interface craft. All rights reserved.<br>
+        &copy; 2026 Tourist Lens. All rights reserved.<br>
         Apple, the Apple logo, iPhone, and App Store are trademarks of Apple Inc. Google Play is a trademark of Google
         LLC.
       </p>
     </div>
   </footer>
 
-  <!-- Apple-Style Video Modal -->
+  <!-- Studio Video Modal -->
   <div class="video-modal-backdrop" id="videoModal" aria-hidden="true">
     <div class="video-modal-content">
       <button class="video-close-btn" id="closeFilmBtn" aria-label="Close video">&times;</button>

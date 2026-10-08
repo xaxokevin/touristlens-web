@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Tourist Lens — Apple Design System
-   Grounded in Apple Human Interface Guidelines & Liquid Glass craft
+   Tourist Lens — Design System
+   Liquid Glass & Precision Craft
    ========================================================================== */
 
 :root {
-  /* Color Palette — Apple OLED Space Black & Pure Materials */
+  /* Color Palette — OLED Space Black & Pure Materials */
   --bg-black: #000000;
   --bg-canvas: #050508;
   --bg-canvas-subtle: #0a0b12;
@@ -13,7 +13,7 @@
   --bg-glass: rgba(255, 255, 255, 0.05);
   --bg-glass-strong: rgba(28, 28, 35, 0.82);
   
-  /* Text & Labels (Apple HIG hierarchy) */
+  /* Text & Labels */
   --text-primary: #f5f5f7;
   --text-secondary: #a1a1a6;
   --text-tertiary: #6e6e73;
@@ -266,7 +266,7 @@ img, video {
 }
 
 /* ==========================================================================
-   Hero Section — Apple Keynote Style
+   Hero Section
    ========================================================================== */
 .hero-section {
   position: relative;
@@ -368,49 +368,49 @@ img, video {
   box-shadow: 0 10px 25px -4px rgba(229, 184, 105, 0.25), 0 0 0 1px rgba(229, 184, 105, 0.5);
 }
 
-/* ===== Apple Audio Voice Showcase (Bento Card 2) ===== */
+/* ===== Studio 8-Language Audio Guide Showcase (Bento Card 2) ===== */
 .audio-voice-showcase {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   margin-top: auto;
 }
 
 .voice-player-card {
-  background: rgba(28, 29, 38, 0.75);
+  background: rgba(22, 24, 33, 0.85);
   border: 1px solid var(--border-specular);
   border-radius: var(--radius-card);
-  padding: 16px 18px;
+  padding: 18px 20px;
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .voice-player-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .voice-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
+  gap: 8px;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--accent-gold);
 }
 
 .voice-badge-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent-gold);
-  box-shadow: 0 0 8px var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
   animation: pulse-glow 2s infinite ease-in-out;
 }
 
@@ -418,7 +418,7 @@ img, video {
   display: flex;
   align-items: center;
   gap: 3px;
-  height: 20px;
+  height: 18px;
   padding: 0 4px;
 }
 
@@ -426,29 +426,24 @@ img, video {
   width: 3px;
   background: linear-gradient(180deg, var(--accent-gold-light), var(--accent-gold));
   border-radius: 3px;
-  animation: wave-bar 1.4s ease-in-out infinite alternate;
+  animation: wave-bar 1.3s ease-in-out infinite alternate;
 }
 
 .voice-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
 .voice-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
-.voice-bar:nth-child(3) { height: 20px; animation-delay: 0.15s; }
-.voice-bar:nth-child(4) { height: 12px; animation-delay: 0.4s; }
-.voice-bar:nth-child(5) { height: 18px; animation-delay: 0.25s; }
+.voice-bar:nth-child(3) { height: 18px; animation-delay: 0.15s; }
+.voice-bar:nth-child(4) { height: 10px; animation-delay: 0.4s; }
+.voice-bar:nth-child(5) { height: 16px; animation-delay: 0.25s; }
 .voice-bar:nth-child(6) { height: 8px; animation-delay: 0.35s; }
-.voice-bar:nth-child(7) { height: 16px; animation-delay: 0.05s; }
-.voice-bar:nth-child(8) { height: 10px; animation-delay: 0.2s; }
-
-@keyframes wave-bar {
-  0% { transform: scaleY(0.4); opacity: 0.6; }
-  100% { transform: scaleY(1.2); opacity: 1; }
-}
 
 .voice-sample-quote {
-  font-size: 0.86rem;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.5;
   color: var(--text-primary);
   font-style: italic;
-  margin-bottom: 10px;
+  min-height: 52px;
+  margin-bottom: 12px;
+  transition: opacity 0.2s var(--ease-apple);
 }
 
 .voice-meta-bar {
@@ -458,50 +453,69 @@ img, video {
   font-size: 0.72rem;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-hairline);
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
-/* Minimalist Typographic Language Grid */
+/* 2-Column Balanced Language Selector */
 .languages-pill-cloud {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
   width: 100%;
 }
 
 .lang-code-pill {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 8px 4px;
+  gap: 10px;
+  padding: 10px 14px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  transition: all 0.25s var(--ease-apple);
-  text-align: center;
+  transition: all 0.22s var(--ease-apple);
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
 }
 
 .lang-code-pill:hover {
-  background: rgba(229, 184, 105, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.lang-code-pill.active {
+  background: rgba(229, 184, 105, 0.14);
   border-color: var(--accent-gold);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 15px -3px rgba(229, 184, 105, 0.25), inset 0 0 0 1px var(--accent-gold);
 }
 
 .lang-code-badge {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent-gold);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  width: 24px;
 }
 
 .lang-name-label {
-  font-size: 0.68rem;
-  color: var(--text-secondary);
-  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-/* ===== Apple Travel Passport Device Showcase (Bento Card 3) ===== */
+.lang-code-pill.active .lang-name-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===== Travel Passport Device Showcase (Bento Card 3) ===== */
 .bento-passport-device {
   position: relative;
   width: 100%;
@@ -591,7 +605,7 @@ img, video {
   fill: var(--accent-gold);
 }
 
-/* Apple Video Modal */
+/* Studio Video Modal */
 .video-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -772,7 +786,7 @@ img, video {
   pointer-events: none;
 }
 
-/* Apple Hardware Frame */
+/* Mobile Hardware Frame */
 .iphone-frame {
   position: relative;
   width: 320px;
@@ -963,7 +977,7 @@ img, video {
 }
 
 /* ==========================================================================
-   Apple Bento Grid
+   Bento Grid Section
    ========================================================================== */
 .bento-grid {
   display: grid;
@@ -1074,7 +1088,7 @@ img, video {
 }
 
 /* ==========================================================================
-   Interactive Feature Showcase (Apple HIG Tabs)
+   Interactive Feature Showcase
    ========================================================================== */
 .segmented-control {
   display: flex;
@@ -1204,7 +1218,7 @@ img, video {
 }
 
 /* ==========================================================================
-   Privacy by Design (Apple Standard)
+   Privacy by Design
    ========================================================================== */
 .privacy-band {
   background: radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),

@@ -1,5 +1,5 @@
 /**
- * Tourist Lens — Apple-crafted Interactivity
+ * Tourist Lens — Core Interactivity
  */
 (function () {
   'use strict';
@@ -114,6 +114,25 @@
       if (e.key === 'Escape' && videoModal.classList.contains('open')) {
         closeModal();
       }
+    });
+  }
+
+  // Bento 2: Interactive Audio Language Switcher
+  var langPills = document.querySelectorAll('.lang-code-pill');
+  var voiceQuote = document.getElementById('voiceSampleQuote');
+  if (langPills.length && voiceQuote) {
+    langPills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var quote = pill.getAttribute('data-quote');
+        if (!quote) return;
+        langPills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        voiceQuote.style.opacity = '0';
+        setTimeout(function () {
+          voiceQuote.innerHTML = quote;
+          voiceQuote.style.opacity = '1';
+        }, 140);
+      });
     });
   }
 })();
