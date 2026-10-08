@@ -126,12 +126,12 @@
             <img src="assets/img/badges/google-play-badge-en.svg" alt="Get it on Google Play" height="44">
           </a>
 
-          <button class="btn-film" id="openFilmBtn" aria-label="Watch the film">
+          <a class="btn-film" id="openFilmBtn" href="https://youtube.com/shorts/yztP5BvL5oc?feature=share" target="_blank" rel="noopener" aria-label="Watch the film on YouTube">
             <svg viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
             <span>Watch film (20s)</span>
-          </button>
+          </a>
         </div>
 
         <div class="hero-meta-badges">
@@ -733,9 +733,11 @@
   <div class="video-modal-backdrop" id="videoModal" aria-hidden="true">
     <div class="video-modal-content">
       <button class="video-close-btn" id="closeFilmBtn" aria-label="Close video">&times;</button>
-      <video id="filmVideo" playsinline preload="metadata" controls>
-        <source src="assets/video/brag-en.mp4" type="video/mp4">
-      </video>
+      <iframe id="filmIframe" src="" data-src="https://www.youtube-nocookie.com/embed/yztP5BvL5oc?autoplay=1&rel=0&playsinline=1" title="Tourist Lens Preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <a class="modal-yt-footer" href="https://youtube.com/shorts/yztP5BvL5oc?feature=share" target="_blank" rel="noopener">
+        <span>Open on YouTube</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+      </a>
     </div>
   </div>
 

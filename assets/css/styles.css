@@ -623,10 +623,41 @@ img, video {
   background: #000;
 }
 
-.video-modal-content video {
+.video-modal-content video,
+.video-modal-content iframe {
   width: 100%;
   height: 100%;
+  border: 0;
+  display: block;
   object-fit: cover;
+}
+
+.modal-yt-footer {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  color: var(--text-primary);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.2s var(--ease-apple);
+}
+
+.modal-yt-footer:hover {
+  background: rgba(229, 184, 105, 0.2);
+  border-color: var(--accent-gold);
+  color: #fff;
 }
 
 .video-close-btn {
