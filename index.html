@@ -1,89 +1,576 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tourist Lens — Point your camera. Discover the story.</title><meta name="description" content="Tourist Lens is an AI travel companion. Point your camera at any landmark for instant identification and a narrated history. Privacy-first.">
-<link rel="canonical" href="https://xaxokevin.github.io/touristlens-web/">
-<link rel="alternate" hreflang="en" href="https://xaxokevin.github.io/touristlens-web/">
-<link rel="alternate" hreflang="es" href="https://xaxokevin.github.io/touristlens-web/index.es.html">
-<link rel="alternate" hreflang="x-default" href="https://xaxokevin.github.io/touristlens-web/">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<meta name="theme-color" content="#0b0910">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Tourist Lens">
-<meta property="og:url" content="https://xaxokevin.github.io/touristlens-web/">
-<meta property="og:title" content="Tourist Lens — Point your camera. Discover the story."><meta property="og:description" content="An AI travel companion. Point your camera at any landmark for instant identification and a narrated history. Privacy-first.">
-<meta property="og:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tourist Lens"><meta name="twitter:description" content="Point your camera at any landmark for instant AI identification and a narrated history."><meta name="twitter:image" content="https://xaxokevin.github.io/touristlens-web/assets/img/og-cover.jpg">
-<link rel="preload" as="image" href="assets/img/hero-poster.webp" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Tourist Lens","applicationCategory":"TravelApplication","operatingSystem":"iOS, Android","description":"AI travel companion. Point your camera at any landmark for instant identification and a narrated history.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-</head><body>
-<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div><div class="grain"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Lens — Point your camera. Discover the story.</title>
+  <meta name="description" content="Tourist Lens is an intelligent AI travel companion. Point your camera at any landmark for real-time identification, rich history narration, and smart itinerary planning. Privacy-first.">
+  
+  <!-- Canonical & Alternate Links -->
+  <link rel="canonical" href="https://touristlens.app/">
+  <link rel="alternate" hreflang="en" href="https://touristlens.app/">
+  <link rel="alternate" hreflang="es" href="https://touristlens.app/index.es.html">
+  <link rel="alternate" hreflang="x-default" href="https://touristlens.app/">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#000000">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tourist Lens">
+  <meta property="og:url" content="https://touristlens.app/">
+  <meta property="og:title" content="Tourist Lens — Point your camera. Discover the story.">
+  <meta property="og:description" content="An AI travel companion grounded in Apple design principles. Instant landmark identification, multi-day itineraries, and digital passport.">
+  <meta property="og:image" content="https://touristlens.app/assets/img/feature-graphic-en.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tourist Lens — AI Travel Companion">
+  <meta name="twitter:description" content="Point your camera at any landmark for instant AI identification, rich narration, and personalized itineraries.">
+  <meta name="twitter:image" content="https://touristlens.app/assets/img/feature-graphic-en.png">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tourist Lens",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "AI travel companion. Point your camera at any landmark for instant identification and a narrated history.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
 
-<div class="topbar" id="topbar"><nav><div class="brand">Tourist<span>&nbsp;Lens</span></div>
-<div class="nav-links"><a href="#tour">Features</a><a href="legal/privacy/en.html">Privacy</a><a class="lang" href="index.es.html">ES</a></div></nav></div>
+  <!-- Ambient Backing Elements -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-<header class="hero">
-<div class="hero-media">
-<video id="heroVideo" muted loop playsinline autoplay preload="auto" poster="assets/img/hero-poster.webp" aria-hidden="true">
-<source src="assets/video/welcome.mp4" type="video/mp4"></video>
-</div>
-<div class="hero-scrim"></div>
-<div class="wrap"><div class="hero-inner">
-<span class="eyebrow">AI Travel Companion</span>
-<h1 data-kinetic>Point your camera. Discover the story.</h1>
-<p class="lead">Aim at any monument, sculpture, or street. Tourist Lens names it and narrates its history in seconds — before you even lower your phone.</p>
-<div class="cta">
-<a class="btn" data-magnetic href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.36 12.78c.02 2.36 2.07 3.14 2.1 3.16-.02.06-.33 1.13-1.08 2.23-.65.95-1.32 1.9-2.38 1.92-1.04.02-1.38-.62-2.57-.62-1.19 0-1.56.6-2.55.64-1.02.04-1.8-1.03-2.46-1.98-1.34-1.95-2.37-5.5-.99-7.9.68-1.19 1.9-1.95 3.23-1.97 1-.02 1.95.68 2.57.68.61 0 1.77-.84 2.98-.72.51.02 1.94.21 2.86 1.56-.07.05-1.71 1-1.69 2.98M14.4 5.8c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.2-.51.59-.96 1.53-.84 2.44.88.07 1.79-.45 2.34-1.11"/></svg><span><small>Download on</small><b>App Store</b></span></a>
-<a class="btn" data-magnetic href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
-</div>
-<div class="trust"><span>Free to start</span><span>No account needed</span><span>On-device privacy</span></div>
-</div></div>
-<a class="scrolldown" href="#proof" aria-label="Scroll to explore"><span>Explore</span><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-</header>
+  <!-- Floating Liquid Glass Header -->
+  <header class="site-header">
+    <nav class="nav-pill">
+      <a href="#" class="brand" aria-label="Tourist Lens Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M9 3L7.17 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9Zm3 15a6 6 0 1 1 0-12 6 6 0 0 1 0 12Z"/></svg>
+        </div>
+        <div class="brand-text">Tourist<span>&nbsp;Lens</span></div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#interactive">Experience</a>
+        <a href="#privacy">Privacy</a>
+        <a href="legal/privacy/en.html">Legal</a>
+      </div>
+      
+      <div class="nav-actions">
+        <a href="index.es.html" class="lang-badge" title="Ver en Español">ES</a>
+        <a href="https://apps.apple.com/us/app/tourist-lens/id6776362688" class="btn-pill-sm" target="_blank" rel="noopener">
+          <span>Get App</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-<main>
-<section id="proof" class="wrap"><h2 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Why Tourist Lens</h2><div class="proof-grid">
-<div class="proof-tile glass reveal"><div class="ico">⚡</div><h3>Instant identification</h3><p>Point and know what you're looking at in real time, with a confidence score you can trust.</p></div>
-<div class="proof-tile glass reveal"><div class="ico">🌐</div><h3>8 languages</h3><p>Every narration, translated and spoken in your language.</p></div>
-<div class="proof-tile glass reveal"><div class="ico">🔒</div><h3>Privacy-first</h3><p>An on-device filter screens every image before anything leaves your phone.</p></div>
-<div class="proof-tile glass reveal"><div class="ico">🎟️</div><h3>Passes, not subscriptions</h3><p>Pay for time when you travel. No auto-renew, ever.</p></div>
-</div></section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="eyebrow-pill">
+          <span class="pulsing-dot"></span>
+          <span>Apple HIG Crafted · AI Travel Companion</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Point your camera. <br>
+          <span class="gradient-text">Discover the story.</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Aim at any monument, sculpture, or hidden street. Tourist Lens identifies it in real time and narrates its history in seconds — before you even lower your phone.
+        </p>
+        
+        <div class="store-buttons-wrap">
+          <a class="btn-store" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.89c.65-.79 1.1-1.9 0.98-3-.99.04-2.17.66-2.87 1.48-.61.71-1.15 1.84-1.01 2.92 1.1.09 2.25-.59 2.9-1.4z"/></svg>
+            <div class="btn-store-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          
+          <a class="btn-store" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg>
+            <div class="btn-store-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
 
-<section id="tour"><div class="wrap">
-<div class="sh reveal"><div class="kicker">The app</div><h2>See it the way you'll use it</h2><p>Real screens from Tourist Lens — point, identify, and explore.</p></div>
-<div class="row reveal"><div class="copy"><div class="n">Live identification</div><h3>Know what you're looking at</h3><p>Point at any landmark and Tourist Lens identifies it in real time, with a confidence score you can actually trust.</p><ul><li>Monuments, sculptures &amp; hidden details</li><li>Ranked by confidence, never a blind guess</li><li>On-device privacy filter runs first</li></ul></div><div class="shot" data-parallax><div class="duo-pair">
-<picture><source srcset="assets/img/camera_result.webp" type="image/webp"><img class="back" src="assets/img/camera_result.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Landmark identification result"></picture>
-<picture><source srcset="assets/img/camera_scan.webp" type="image/webp"><img class="front" src="assets/img/camera_scan.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Live camera scanning a landmark"></picture>
-</div></div></div>
-<div class="row rev reveal"><div class="copy"><div class="n">AI narration &amp; chat</div><h3>The story behind the stone</h3><p>Hear a rich, grounded history of every place — then ask anything. It's a local guide that fits in your pocket.</p><ul><li>Narrated in 8 languages</li><li>Ask follow-ups in natural language</li><li>Every discovery saved to your history</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/history.webp" type="image/webp"><img src="assets/img/history.png" width="1920" height="1920" loading="lazy" decoding="async" alt="History and narration screen"></picture></div></div>
-<div class="row reveal"><div class="copy"><div class="n">Your journey, mapped</div><h3>Every capture, on the map</h3><p>Your discoveries come alive on a living map — a dynamic version of your history. Swipe through your captures and the map travels with you, dropping the pin right where each photo was taken.</p><ul><li>A dynamic map of everything you've identified</li><li>Scroll the carousel — the pin follows each shot</li><li>Your travel history, place by place</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/map.webp" type="image/webp"><img src="assets/img/map.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Map of your captured discoveries, synced to the photo carousel"></picture></div></div>
-<div class="row rev reveal"><div class="copy"><div class="n">Passes &amp; passport</div><h3>Collect every place you discover</h3><p>Stamp a digital passport as you explore, and unlock unlimited scanning with honest, time-based passes.</p><ul><li>Pay for time, not subscriptions</li><li>Discoveries encrypted on your device</li><li>No auto-renew, no surprises</li></ul></div><div class="shot" data-parallax><picture><source srcset="assets/img/passport.webp" type="image/webp"><img src="assets/img/passport.png" width="1920" height="1920" loading="lazy" decoding="async" alt="Travel passport with collected stamps"></picture></div></div>
-</div></section>
+          <button class="btn-film" id="openFilmBtn" aria-label="Watch the film">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span>Watch the film (20s)</span>
+          </button>
+        </div>
+        
+        <div class="hero-meta-badges">
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span>Free to start</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span>No account required</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span>On-device edge privacy</span>
+          </div>
+        </div>
 
-<section class="wrap"><div class="privacy-grid glass reveal">
-<div class="privacy-copy"><div class="lock"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm3 8H9V6a3 3 0 0 1 6 0z"/></svg></div>
-<h2>Privacy, by design</h2><p>A local model screens every image on your device before anything is sent. Your data stays yours — AES-256 encryption and certificate pinning, end to end.</p></div>
-<div class="privacy-flow">
-<div class="flow-step"><b>Edge AI filter</b><span>Runs on your device before any image is transmitted.</span></div>
-<div class="flow-step"><b>Encrypted channel</b><span>Only tourism-relevant images travel, over certificate-pinned connections.</span></div>
-<div class="flow-step"><b>Keys stay on device</b><span>AES-256 encryption keys never leave your phone's secure enclave.</span></div>
-</div>
-</div></section>
+        <!-- Centerpiece Hardware Mockup Presentation -->
+        <div class="showcase-stage">
+          <div class="showcase-duo">
+            <!-- Primary Device: Live Camera View -->
+            <div class="iphone-frame primary">
+              <div class="dynamic-island"><div class="island-camera"></div></div>
+              <div class="screen-gloss"></div>
+              <div class="iphone-screen">
+                <picture>
+                  <source srcset="assets/img/renders/en/01_camera_screen.webp" type="image/webp">
+                  <img src="assets/img/renders/en/01_camera_screen.png" alt="Tourist Lens Live Camera Screen" width="393" height="852" loading="eager">
+                </picture>
+              </div>
+            </div>
 
-<section class="wrap"><div class="closing glass reveal">
-<h2>Your next trip, already narrated.</h2>
-<p>Free to start. No account needed. Point your camera and let Tourist Lens tell you the story.</p>
-<div class="cta">
-<a class="btn" data-magnetic href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16.36 12.78c.02 2.36 2.07 3.14 2.1 3.16-.02.06-.33 1.13-1.08 2.23-.65.95-1.32 1.9-2.38 1.92-1.04.02-1.38-.62-2.57-.62-1.19 0-1.56.6-2.55.64-1.02.04-1.8-1.03-2.46-1.98-1.34-1.95-2.37-5.5-.99-7.9.68-1.19 1.9-1.95 3.23-1.97 1-.02 1.95.68 2.57.68.61 0 1.77-.84 2.98-.72.51.02 1.94.21 2.86 1.56-.07.05-1.71 1-1.69 2.98M14.4 5.8c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.2-.51.59-.96 1.53-.84 2.44.88.07 1.79-.45 2.34-1.11"/></svg><span><small>Download on</small><b>App Store</b></span></a>
-<a class="btn" data-magnetic href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
-</div>
-</div></section>
-</main>
+            <!-- Secondary Device: Instant Recognition Sheet -->
+            <div class="iphone-frame secondary">
+              <div class="dynamic-island"><div class="island-camera"></div></div>
+              <div class="screen-gloss"></div>
+              <div class="iphone-screen">
+                <picture>
+                  <source srcset="assets/img/renders/en/01b_result_bottom_sheet.webp" type="image/webp">
+                  <img src="assets/img/renders/en/01b_result_bottom_sheet.png" alt="Tourist Lens Recognition Sheet" width="393" height="852" loading="eager">
+                </picture>
+              </div>
+            </div>
 
-<footer class="main-foot"><div class="wrap">
-<div class="foot-top"><div class="brand">Tourist<span>&nbsp;Lens</span></div>
-<div class="foot-links"><a href="legal/privacy/en.html">Privacy Policy</a><a href="legal/terms/en.html">Terms &amp; Conditions</a><a href="mailto:tourist.ai.guide@gmail.com">Contact</a></div></div>
-<p class="foot-copy">© 2026 Tourist Lens. All rights reserved.</p>
-</div></footer>
+            <!-- Floating Glass Badges -->
+            <div class="floating-glass-badge badge-left">
+              <div class="badge-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              </div>
+              <div>
+                <div class="badge-text-title">Fushimi Inari-taisha</div>
+                <div class="badge-text-sub">8th Century · 99.4% Confidence</div>
+              </div>
+            </div>
 
-<script src="assets/js/main.js"></script>
-</body></html>
+            <div class="floating-glass-badge badge-right">
+              <div class="badge-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </div>
+              <div>
+                <div class="badge-text-title">Smart Audio Guide</div>
+                <div class="badge-text-sub">Instant voice in 8 languages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bento Grid Showcase -->
+    <section id="features" class="section-padding">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker">Core Architecture</span>
+          <h2 class="section-heading">Designed with Apple precision.</h2>
+          <p class="section-subtext">Every screen, animation, and interaction is engineered to feel completely natural, responsive, and respectful of your privacy.</p>
+        </div>
+
+        <div class="bento-grid">
+          
+          <!-- Bento 1: Visual Intelligence (Col 8) -->
+          <div class="bento-card col-8">
+            <div class="bento-content">
+              <span class="bento-tag">Visual Intelligence</span>
+              <h3 class="bento-title">Sub-second recognition. Real confidence.</h3>
+              <p class="bento-desc">Point your lens at monuments, sculptures, or architectural details. Powered by multimodal vision AI, Tourist Lens delivers instant context with verified certainty.</p>
+              <div class="bento-pill-stats">
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.05.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.01-4.09l-2.49-1.46C15.91 17.84 14.07 19 12 19z"/></svg> 0.4s Recognition</div>
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 99.4% Accuracy</div>
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> Zero Telemetry</div>
+              </div>
+            </div>
+            <div class="bento-visual">
+              <div class="bento-mockup-crop">
+                <picture>
+                  <source srcset="assets/img/renders/en/01b_result_bottom_sheet.webp" type="image/webp">
+                  <img src="assets/img/renders/en/01b_result_bottom_sheet.png" alt="Recognition Sheet Detail" width="380" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: 8 Languages (Col 4) -->
+          <div class="bento-card col-4">
+            <div class="bento-content">
+              <span class="bento-tag">Global Resonance</span>
+              <h3 class="bento-title">Narrated in 8 languages.</h3>
+              <p class="bento-desc">Experience culture in your mother tongue: English, Español, Français, Italiano, Deutsch, Português, 中文, and 日本語.</p>
+            </div>
+            <div class="bento-visual" style="margin-top:auto;">
+              <div class="bento-pill-stats" style="flex-direction: column; width: 100%;">
+                <div class="stat-chip" style="width: 100%; justify-content: space-between;"><span>🇬🇧 English</span> <strong>Native Voice</strong></div>
+                <div class="stat-chip" style="width: 100%; justify-content: space-between;"><span>🇪🇸 Español</span> <strong>Voz Natural</strong></div>
+                <div class="stat-chip" style="width: 100%; justify-content: space-between;"><span>🇯🇵 日本語</span> <strong>自然な音声</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Digital Passport (Col 4) -->
+          <div class="bento-card col-4">
+            <div class="bento-content">
+              <span class="bento-tag">Travel Passport</span>
+              <h3 class="bento-title">Collect every wonder you explore.</h3>
+              <p class="bento-desc">Earn digital collectible stamps with date and coordinates whenever you discover a historic destination.</p>
+            </div>
+            <div class="bento-visual">
+              <div class="bento-mockup-crop" style="max-height: 220px; overflow: hidden;">
+                <picture>
+                  <source srcset="assets/img/renders/en/03_passport_screen.webp" type="image/webp">
+                  <img src="assets/img/renders/en/03_passport_screen.png" alt="Digital Passport Stamps" width="360" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 4: AI Itinerary Planner (Col 8) -->
+          <div class="bento-card col-8">
+            <div class="bento-content">
+              <span class="bento-tag">Smart Itinerary</span>
+              <h3 class="bento-title">Personalized multi-day travel plans.</h3>
+              <p class="bento-desc">Plan trips without hours of research. The AI Wizard organizes POIs into optimized daily routes with walking times, weather insights, and daily audio briefings.</p>
+              <div class="bento-pill-stats">
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg> 1 to 7 Days</div>
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg> Optimal Walking Routes</div>
+                <div class="stat-chip"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg> Daily Audio Briefing</div>
+              </div>
+            </div>
+            <div class="bento-visual">
+              <div class="bento-mockup-crop">
+                <picture>
+                  <source srcset="assets/img/renders/en/06_guide_itinerary_screen.webp" type="image/webp">
+                  <img src="assets/img/renders/en/06_guide_itinerary_screen.png" alt="Itinerary Screen" width="380" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Experience Section (Segmented Control HIG) -->
+    <section id="interactive" class="section-padding">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-kicker">Interactive Showcase</span>
+          <h2 class="section-heading">Four facets of your journey.</h2>
+          <p class="section-subtext">Toggle between Tourist Lens features to see how each screen accompanies your travel step by step.</p>
+        </div>
+
+        <!-- HIG Segmented Control -->
+        <div class="segmented-control">
+          <div class="segmented-pill-bar" role="tablist">
+            <button class="seg-btn active" data-target="panel-camera" role="tab" aria-selected="true">Instant Camera</button>
+            <button class="seg-btn" data-target="panel-planner" role="tab" aria-selected="false">AI Planner</button>
+            <button class="seg-btn" data-target="panel-map" role="tab" aria-selected="false">Interactive Map</button>
+            <button class="seg-btn" data-target="panel-passport" role="tab" aria-selected="false">Passport &amp; History</button>
+          </div>
+        </div>
+
+        <div class="interactive-feature-stage">
+          
+          <!-- Panel 1: Instant Camera -->
+          <div class="feature-panel active" id="panel-camera" role="tabpanel">
+            <div class="feature-panel-copy">
+              <span class="bento-tag">Computer Vision</span>
+              <h3>Identify anything in your field of view.</h3>
+              <p>Forget scrolling through travel blog lists. Aim at any landmark, façade, or statue. Tourist Lens recognizes it instantly, providing historical dates, cultural context, and interactive Q&amp;A.</p>
+              <ul class="feature-panel-list">
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Live 1x / 2x / 5x Optical Framing:</strong> Zoom into distant architectural friezes with zero distortion.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Grounded Narration:</strong> Verified facts, historical anecdotes, and verified citations.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Ask Follow-ups:</strong> Tap 'Ask AI' to inquire about admission, architect biography, or hidden myths.</div>
+                </li>
+              </ul>
+            </div>
+            <div class="feature-mockup-wrapper">
+              <div class="iphone-frame" style="width: 290px;">
+                <div class="dynamic-island"><div class="island-camera"></div></div>
+                <div class="screen-gloss"></div>
+                <div class="iphone-screen">
+                  <picture>
+                    <source srcset="assets/img/renders/en/01_camera_screen.webp" type="image/webp">
+                    <img src="assets/img/renders/en/01_camera_screen.png" alt="Camera Live View" width="290" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: AI Planner -->
+          <div class="feature-panel" id="panel-planner" role="tabpanel">
+            <div class="feature-panel-copy">
+              <span class="bento-tag">AI Travel Wizard</span>
+              <h3>Curate your trip in three simple steps.</h3>
+              <p>Select your destination city, trip length, and travel personality. The AI Guide generates an editorial itinerary that balances must-see monuments with scenic walking paths.</p>
+              <ul class="feature-panel-list">
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Daily Editorial Overview:</strong> Morning briefings and recommended walking shoes.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Curated Stops:</strong> Organized in logical geographical sequence to minimize transit exhaustion.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>PDF Export:</strong> Download high-fidelity offline PDF itineraries anytime.</div>
+                </li>
+              </ul>
+            </div>
+            <div class="feature-mockup-wrapper">
+              <div class="iphone-frame" style="width: 290px;">
+                <div class="dynamic-island"><div class="island-camera"></div></div>
+                <div class="screen-gloss"></div>
+                <div class="iphone-screen">
+                  <picture>
+                    <source srcset="assets/img/renders/en/06_guide_itinerary_screen.webp" type="image/webp">
+                    <img src="assets/img/renders/en/06_guide_itinerary_screen.png" alt="Itinerary Daily Overview" width="290" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Interactive Map -->
+          <div class="feature-panel" id="panel-map" role="tabpanel">
+            <div class="feature-panel-copy">
+              <span class="bento-tag">Geo-spatial Routing</span>
+              <h3>Your route mapped in high resolution.</h3>
+              <p>Visualize your planned itinerary and all captured discoveries on an interactive dark-luxury map. Numbered stops, kilometer tallies, and estimated walking hours stay right at your fingertips.</p>
+              <ul class="feature-panel-list">
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Sequential Waypoints:</strong> Clear numeric route markers (1, 2, 3...) guide your day smoothly.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Live POI Cards:</strong> Swipe bottom cards to center the map on each historic attraction.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Battery-Optimized:</strong> Custom vector styling engineered to conserve OLED battery life.</div>
+                </li>
+              </ul>
+            </div>
+            <div class="feature-mockup-wrapper">
+              <div class="iphone-frame" style="width: 290px;">
+                <div class="dynamic-island"><div class="island-camera"></div></div>
+                <div class="screen-gloss"></div>
+                <div class="iphone-screen">
+                  <picture>
+                    <source srcset="assets/img/renders/en/05_guide_poi_map_screen.webp" type="image/webp">
+                    <img src="assets/img/renders/en/05_guide_poi_map_screen.png" alt="Interactive Route Map" width="290" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Passport & History -->
+          <div class="feature-panel" id="panel-passport" role="tabpanel">
+            <div class="feature-panel-copy">
+              <span class="bento-tag">Digital Memorabilia</span>
+              <h3>A living journal of your travels.</h3>
+              <p>Collect digital badges and commemorative passport stamps for every site visited worldwide. From the Eiffel Tower and Alhambra to Kyoto Torii gates, relive your adventures anytime.</p>
+              <ul class="feature-panel-list">
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>Curated Badges:</strong> Collect artistic stamps celebrating heritage architecture.</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>City Filters:</strong> Organize discoveries by city (Kyoto, Paris, Rome, Agra, Granada...).</div>
+                </li>
+                <li>
+                  <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div><strong>100% Encrypted:</strong> Your travel history remains stored locally on your device.</div>
+                </li>
+              </ul>
+            </div>
+            <div class="feature-mockup-wrapper">
+              <div class="iphone-frame" style="width: 290px;">
+                <div class="dynamic-island"><div class="island-camera"></div></div>
+                <div class="screen-gloss"></div>
+                <div class="iphone-screen">
+                  <picture>
+                    <source srcset="assets/img/renders/en/03_passport_screen.webp" type="image/webp">
+                    <img src="assets/img/renders/en/03_passport_screen.png" alt="Passport Stamps Screen" width="290" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Section (Apple HIG Responsibility Principle) -->
+    <section id="privacy" class="section-padding">
+      <div class="container">
+        <div class="privacy-band">
+          <div>
+            <div class="privacy-lock-badge">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <span class="section-kicker">Security Architecture</span>
+            <h2 class="section-heading" style="font-size: 2.4rem;">Privacy, by design.</h2>
+            <p class="section-subtext" style="font-size: 1.05rem;">
+              Tourist Lens was architected on Apple's core belief: what happens on your device stays on your device. We never sell your location, track your browsing, or train models on your private photos.
+            </p>
+          </div>
+
+          <div class="privacy-pillars">
+            <div class="pillar-item">
+              <div class="pillar-bullet">01</div>
+              <div class="pillar-text">
+                <h4>On-Device Edge Filtering</h4>
+                <p>Every photo is screened on your device before network transmission. Only landmarks are processed.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-bullet">02</div>
+              <div class="pillar-text">
+                <h4>Certificate-Pinned Connections</h4>
+                <p>Data in transit travels solely through strict TLS certificate-pinned endpoints against interception.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-bullet">03</div>
+              <div class="pillar-text">
+                <h4>Local Enclave Encryption</h4>
+                <p>Your passport, scans, and notes are encrypted with AES-256 keys protected inside the hardware Secure Enclave.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-bullet">04</div>
+              <div class="pillar-text">
+                <h4>Honest Time Passes</h4>
+                <p>No predatory automatic renewal subscriptions. Purchase honest time-based passes only when you travel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Call to Action -->
+    <section class="section-padding" style="padding-top: 0;">
+      <div class="container">
+        <div class="closing-card">
+          <h2>Your next trip, already narrated.</h2>
+          <p>Download Tourist Lens today. Free to start, no account required. Point your camera and let history speak.</p>
+          
+          <div class="store-buttons-wrap">
+            <a class="btn-store" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.89c.65-.79 1.1-1.9 0.98-3-.99.04-2.17.66-2.87 1.48-.61.71-1.15 1.84-1.01 2.92 1.1.09 2.25-.59 2.9-1.4z"/></svg>
+              <div class="btn-store-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            
+            <a class="btn-store" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.2.2-.3.5-.3.9v17.6c0 .4.1.7.3.9l9.9-9.9zM17 8.4l-2.2 2.2 2.2 2.2 3.2-1.8c.9-.5.9-1.5 0-2zM14.5 11l-9.7 9.7c.4.2.8.2 1.1 0l11.4-6.5zM5.9 2.3l9.7 9.7-1.1 1.1z"/></svg>
+              <div class="btn-store-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M9 3L7.17 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9Zm3 15a6 6 0 1 1 0-12 6 6 0 0 1 0 12Z"/></svg>
+          </div>
+          <div class="brand-text">Tourist<span>&nbsp;Lens</span></div>
+        </a>
+
+        <div class="footer-links">
+          <a href="legal/privacy/en.html">Privacy Policy</a>
+          <a href="legal/terms/en.html">Terms of Service</a>
+          <a href="mailto:tourist.ai.guide@gmail.com">Support &amp; Contact</a>
+        </div>
+      </div>
+
+      <p class="footer-legal-copy">
+        &copy; 2026 Tourist Lens. Built with Apple Human Interface craft. All rights reserved.<br>
+        Apple, the Apple logo, iPhone, and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Apple-Style Video Modal -->
+  <div class="video-modal-backdrop" id="videoModal" aria-hidden="true">
+    <div class="video-modal-content">
+      <button class="video-close-btn" id="closeFilmBtn" aria-label="Close video">&times;</button>
+      <video id="filmVideo" playsinline preload="metadata" controls>
+        <source src="assets/video/brag-en.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
