@@ -13,8 +13,10 @@ Marketing landing page and legal documentation for **Tourist Lens**, the AI trav
 touristlens-web/
 ├── CNAME                    # Custom domain pointer (touristlens.app)
 ├── DOMAIN_SETUP.md          # Step-by-step DNS & SSL setup guide for touristlens.app
-├── index.html               # Apple HIG landing page (English)
-├── index.es.html            # Apple HIG landing page (Spanish)
+├── robots.txt               # Search engine crawl directives & sitemap declaration
+├── sitemap.xml              # Multilingual XML sitemap (Google Search Console)
+├── index.html               # Apple HIG landing page (English) + JSON-LD Schema
+├── index.es.html            # Apple HIG landing page (Spanish) + JSON-LD Schema
 ├── app-ads.txt              # Store monetization verification
 ├── legal/
 │   ├── privacy/<lang>.html  # Privacy Policy (8 languages: en, es, fr, it, de, pt, zh, ja)

@@ -41,20 +41,101 @@
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Structured Data -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Tourist Lens",
-    "applicationCategory": "TravelApplication",
-    "operatingSystem": "iOS, Android",
-    "description": "Compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante y escuchar su historia narrada.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://touristlens.app/#organization",
+        "name": "Tourist Lens",
+        "url": "https://touristlens.app/",
+        "logo": "https://touristlens.app/assets/img/apple-touch-icon.png",
+        "sameAs": [
+          "https://apps.apple.com/us/app/tourist-lens/id6776362688",
+          "https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide",
+          "https://github.com/xaxokevin"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@touristlens.app",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://touristlens.app/#website",
+        "url": "https://touristlens.app/",
+        "name": "Tourist Lens",
+        "description": "Compañero de viaje inteligente con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante y escuchar su narración.",
+        "publisher": {
+          "@id": "https://touristlens.app/#organization"
+        },
+        "inLanguage": ["es", "en"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://touristlens.app/#software",
+        "name": "Tourist Lens",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "iOS, Android",
+        "description": "Compañero de viaje con IA. Apunta tu cámara a cualquier monumento para identificarlo al instante, escuchar su historia narrada y planificar itinerarios.",
+        "image": "https://touristlens.app/assets/img/feature-graphic-es.png",
+        "screenshot": "https://touristlens.app/assets/img/feature-graphic-es.png",
+        "url": "https://touristlens.app/index.es.html",
+        "publisher": {
+          "@id": "https://touristlens.app/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "installUrl": [
+          "https://apps.apple.com/us/app/tourist-lens/id6776362688",
+          "https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://touristlens.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo identifica Tourist Lens los monumentos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tourist Lens combina visión por computadora en el dispositivo e IA visual multimodal. Apunta tu cámara a cualquier monumento, fachada o escultura para recibir identificación instantánea, historia detallada y narración por audio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Mis fotos y mi ubicación se mantienen privadas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Tourist Lens está diseñada bajo una arquitectura de conocimiento cero (zero-knowledge) y privacidad por diseño. Las fotos se filtran en tu propio dispositivo, las transmisiones van protegidas por fijación de certificados TLS y tus pasaportes y notas se cifran en el Secure Enclave del hardware."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Tourist Lens es gratis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tourist Lens se puede descargar y comenzar a usar gratis en iOS y Android. En lugar de suscripciones automáticas abusivas, dispones de pases por tiempo honestos pensados para la duración de tus viajes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puede Tourist Lens crear itinerarios de viaje personalizados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Tourist Lens crea itinerarios inteligentes adaptados a tu ritmo, intereses y horarios de apertura verificados de los monumentos."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -118,15 +199,18 @@
         <div class="store-buttons-wrap" id="download">
           <a class="badge-link" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank"
             rel="noopener">
-            <img src="assets/img/badges/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="132" height="44">
+            <img src="assets/img/badges/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="132"
+              height="44">
           </a>
 
           <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide"
             target="_blank" rel="noopener">
-            <img src="assets/img/badges/google-play-badge-es.svg" alt="Disponible en Google Play" width="148" height="44">
+            <img src="assets/img/badges/google-play-badge-es.svg" alt="Disponible en Google Play" width="148"
+              height="44">
           </a>
 
-          <a class="btn-film" id="openFilmBtn" href="https://youtube.com/shorts/OMoxgNO6TiY?feature=share" target="_blank" rel="noopener" aria-label="Ver vídeo promocional en YouTube">
+          <a class="btn-film" id="openFilmBtn" href="https://youtube.com/shorts/OMoxgNO6TiY?feature=share"
+            target="_blank" rel="noopener" aria-label="Ver vídeo promocional en YouTube">
             <svg viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
@@ -296,35 +380,43 @@
               </div>
 
               <div class="languages-pill-cloud" role="tablist" aria-label="Idiomas de narración disponibles">
-                <button type="button" class="lang-code-pill active" data-lang="ES" data-quote="&laquo;El santuario principal del kami Inari, deidad de la agricultura y prosperidad.&raquo;">
+                <button type="button" class="lang-code-pill active" data-lang="ES"
+                  data-quote="&laquo;El santuario principal del kami Inari, deidad de la agricultura y prosperidad.&raquo;">
                   <span class="lang-code-badge">ES</span>
                   <span class="lang-name-label">Español</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="EN" data-quote="&laquo;The head shrine of the kami Inari, deity of agriculture and prosperity.&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="EN"
+                  data-quote="&laquo;The head shrine of the kami Inari, deity of agriculture and prosperity.&raquo;">
                   <span class="lang-code-badge">EN</span>
                   <span class="lang-name-label">English</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="FR" data-quote="&laquo;Le sanctuaire principal dédié au kami Inari, divinité de l'agriculture et de la prospérité.&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="FR"
+                  data-quote="&laquo;Le sanctuaire principal dédié au kami Inari, divinité de l'agriculture et de la prospérité.&raquo;">
                   <span class="lang-code-badge">FR</span>
                   <span class="lang-name-label">Français</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="IT" data-quote="&laquo;Il santuario principale del kami Inari, antica divinità dell'agricoltura e prosperità.&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="IT"
+                  data-quote="&laquo;Il santuario principale del kami Inari, antica divinità dell'agricoltura e prosperità.&raquo;">
                   <span class="lang-code-badge">IT</span>
                   <span class="lang-name-label">Italiano</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="DE" data-quote="&laquo;Der Hauptschrein des Kami Inari, Gottheit der Landwirtschaft und des Wohlstands.&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="DE"
+                  data-quote="&laquo;Der Hauptschrein des Kami Inari, Gottheit der Landwirtschaft und des Wohlstands.&raquo;">
                   <span class="lang-code-badge">DE</span>
                   <span class="lang-name-label">Deutsch</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="PT" data-quote="&laquo;O santuário principal do kami Inari, divindade da agricultura e prosperidade.&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="PT"
+                  data-quote="&laquo;O santuário principal do kami Inari, divindade da agricultura e prosperidade.&raquo;">
                   <span class="lang-code-badge">PT</span>
                   <span class="lang-name-label">Português</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="ZH" data-quote="&laquo;伏见稻荷大社：供奉稻荷神的神社总本社，象征丰收与繁荣。&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="ZH"
+                  data-quote="&laquo;伏见稻荷大社：供奉稻荷神的神社总本社，象征丰收与繁荣。&raquo;">
                   <span class="lang-code-badge">ZH</span>
                   <span class="lang-name-label">中文</span>
                 </button>
-                <button type="button" class="lang-code-pill" data-lang="JA" data-quote="&laquo;全国の稲荷神社の総本宮。五穀豊穣と商売繁昌の神を祀る。&raquo;">
+                <button type="button" class="lang-code-pill" data-lang="JA"
+                  data-quote="&laquo;全国の稲荷神社の総本宮。五穀豊穣と商売繁昌の神を祀る。&raquo;">
                   <span class="lang-code-badge">JA</span>
                   <span class="lang-name-label">日本語</span>
                 </button>
@@ -337,17 +429,20 @@
             <div class="bento-content">
               <span class="bento-tag">Pasaporte de Viaje</span>
               <h3 class="bento-title">Un sello por cada monumento que capturas.</h3>
-              <p class="bento-desc">Tu colección digital crece con cada viaje. Cada monumento, catedral, escultura o rincón histórico al que apuntas con tu cámara se registra con fecha de visita y coordenadas GPS.</p>
+              <p class="bento-desc">Tu colección digital crece con cada viaje. Cada monumento, catedral, escultura o
+                rincón histórico al que apuntas con tu cámara se registra con fecha de visita y coordenadas GPS.</p>
               <div class="bento-pill-stats">
                 <div class="stat-chip">
                   <svg viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
                   </svg>
                   Sello en Cada Captura
                 </div>
                 <div class="stat-chip">
                   <svg viewBox="0 0 24 24">
-                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
+                    <path
+                      d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
                   </svg>
                   Fecha y Coordenadas GPS
                 </div>
@@ -363,7 +458,8 @@
                 <div class="iphone-screen">
                   <picture>
                     <source srcset="assets/img/renders/es/03_passport_screen.webp" type="image/webp">
-                    <img src="assets/img/renders/es/03_passport_screen.png" alt="Pantalla del Pasaporte de Viaje de Tourist Lens" width="250" height="542" loading="lazy">
+                    <img src="assets/img/renders/es/03_passport_screen.png"
+                      alt="Pantalla del Pasaporte de Viaje de Tourist Lens" width="250" height="542" loading="lazy">
                   </picture>
                 </div>
               </div>
@@ -696,12 +792,14 @@
           <div class="store-buttons-wrap">
             <a class="badge-link" href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank"
               rel="noopener">
-              <img src="assets/img/badges/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="132" height="44">
+              <img src="assets/img/badges/app-store-badge-es.svg" alt="Descárgalo en el App Store" width="132"
+                height="44">
             </a>
 
             <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide"
               target="_blank" rel="noopener">
-              <img src="assets/img/badges/google-play-badge-es.svg" alt="Disponible en Google Play" width="148" height="44">
+              <img src="assets/img/badges/google-play-badge-es.svg" alt="Disponible en Google Play" width="148"
+                height="44">
             </a>
           </div>
         </div>
@@ -720,7 +818,8 @@
 
         <div class="footer-links">
           <a href="https://apps.apple.com/us/app/tourist-lens/id6776362688" target="_blank" rel="noopener">App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://play.google.com/store/apps/details?id=com.xaxo.tourist_ai_guide" target="_blank"
+            rel="noopener">Google Play</a>
           <a href="legal/privacy/es.html">Política de Privacidad</a>
           <a href="legal/terms/es.html">Términos y Condiciones</a>
           <a href="mailto:tourist.ai.guide@gmail.com">Soporte y Contacto</a>
@@ -739,10 +838,18 @@
   <div class="video-modal-backdrop" id="videoModal" aria-hidden="true">
     <div class="video-modal-content">
       <button class="video-close-btn" id="closeFilmBtn" aria-label="Cerrar vídeo">&times;</button>
-      <iframe id="filmIframe" src="" data-src="https://www.youtube-nocookie.com/embed/OMoxgNO6TiY?autoplay=1&rel=0&playsinline=1" title="Tourist Lens Demostración" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <a class="modal-yt-footer" href="https://youtube.com/shorts/OMoxgNO6TiY?feature=share" target="_blank" rel="noopener">
+      <iframe id="filmIframe" src=""
+        data-src="https://www.youtube-nocookie.com/embed/OMoxgNO6TiY?autoplay=1&rel=0&playsinline=1"
+        title="Tourist Lens Demostración"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <a class="modal-yt-footer" href="https://youtube.com/shorts/OMoxgNO6TiY?feature=share" target="_blank"
+        rel="noopener">
         <span>Abrir en YouTube</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+        </svg>
       </a>
     </div>
   </div>

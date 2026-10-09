@@ -1,0 +1,9 @@
+# robots.txt for https://touristlens.app
+User-agent: *
+Allow: /
+
+# Disallow draft or internal assets if any
+Disallow: /docs/
+
+# Sitemaps
+Sitemap: https://touristlens.app/sitemap.xml
